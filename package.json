@@ -1,0 +1,25 @@
+{
+  "name": "pschild.de",
+  "description": "pschild.de with Gatsby",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "^1.9.212",
+    "gatsby-link": "^1.6.37",
+    "gatsby-plugin-sass": "^1.0.17",
+    "gatsby-plugin-typography": "^1.7.14",
+    "gatsby-remark-copy-linked-files": "^1.5.28",
+    "gatsby-remark-emoji": "0.0.1",
+    "gatsby-remark-images": "^1.5.49",
+    "gatsby-remark-prismjs": "^1.2.15",
+    "gatsby-source-filesystem": "^1.5.23",
+    "gatsby-transformer-remark": "^1.7.33",
+    "react-swipe-events": "^1.0.2",
+    "rehype-react": "^3.0.2",
+    "typography-theme-stern-grove": "^0.15.10"
+  }
+}

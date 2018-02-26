@@ -1,0 +1,12 @@
+.navigation {
+  display: inline;
+  ul {
+    float: right;
+    margin: 0;
+    li {
+      margin: 0 10px;
+      list-style-type: none;
+      display: inline-block;
+    }
+  }
+}
