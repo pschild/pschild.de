@@ -3,8 +3,8 @@ import "./b16-tomorrow-dark.css";
 
 import rehypeReact from "rehype-react";
 import MediaSlider from "../components/MediaSlider/MediaSlider";
-import Link from "gatsby-link";
-import kebabCase from "lodash/kebabCase";
+import moment from "moment";
+import "moment/locale/de";
 
 const renderAst = new rehypeReact({
     createElement: React.createElement,
@@ -14,12 +14,13 @@ const renderAst = new rehypeReact({
 }).Compiler;
 
 export default ({ data }) => {
-    const post = data.markdownRemark;
+    const project = data.markdownRemark;
     return (
         <div>
-            <h1>{post.frontmatter.title}</h1>
+            <h1>{project.frontmatter.title}</h1>
+            <h4>{moment(project.frontmatter.date).format('LL')}</h4>
             {
-                renderAst(post.htmlAst)
+                renderAst(project.htmlAst)
             }
         </div>
     );
@@ -31,6 +32,7 @@ export const query = graphql`
       htmlAst
       frontmatter {
         title
+        date
       }
     }
   }

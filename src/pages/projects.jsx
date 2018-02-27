@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
+import moment from "moment/moment";
+import "moment/locale/de";
 
 export default ({data}) => {
     return (
@@ -9,9 +11,8 @@ export default ({data}) => {
             {data.allMarkdownRemark.edges.map(({ node }) => (
                 <div key={node.id}>
                     <Link to={`projects${node.fields.slug}`}>
-                        <h3>
-                            {node.frontmatter.title}{" "}
-                        </h3>
+                        <h3>{node.frontmatter.title}</h3>
+                        <h4>{moment(node.frontmatter.date).format('LL')}</h4>
                         <p>{node.excerpt}</p>
                     </Link>
                     <hr/>
@@ -25,6 +26,7 @@ export const query = graphql`
   query ProjectsQuery {
     allMarkdownRemark(
       filter: { frontmatter: { layout: { eq: "project" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
     ){
       totalCount
       edges {
@@ -32,6 +34,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            date
           }
           fields {
             slug
