@@ -1,5 +1,6 @@
 import React from "react";
 import "./b16-tomorrow-dark.css";
+import styles from "./blog-post.module.scss";
 
 import rehypeReact from "rehype-react";
 import MediaSlider from "../components/MediaSlider/MediaSlider";
@@ -25,7 +26,7 @@ export default ({ data }) => {
             <div>
                 Kategorie: <Link to={`/blog/category/${kebabCase(post.frontmatter.category)}`}>{post.frontmatter.category}</Link>
             </div>
-            <ul>
+            <ul className={styles.tagList}>
                 {
                     post.frontmatter.tags.map((tag, i) => {
                         return (
