@@ -1,5 +1,8 @@
 ---
 title: Test
+category: "Cat2"
+tags:
+  - "Tag1"
 ---
 **_Note how all headlines below show an anchor link when you hover them?_**\
 That's [gatsby-remark-autolink-headers][5] hooking up all `MarkdownRemark` headers

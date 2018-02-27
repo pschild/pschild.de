@@ -1,5 +1,11 @@
 ---
 title: Medientest
+category: "Cat1"
+tags:
+  - "Tag1"
+  - "Tag2"
+  - "Tag3"
+  - "Tag4"
 ---
 <media-slider>
     <img src="./media/visdat_1.jpg" data-caption="Hello World"/>

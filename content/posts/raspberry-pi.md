@@ -1,11 +1,13 @@
 ---
 title: Raspberry Pi
 slug: my-own-slug
+category: "Cat2"
+tags:
+  - "Tag1"
+  - "Tag2"
 ---
 ```javascript
 let test = function() {
-    console.log('Huhu!');
+    console.log('Huhu1!');
 }
 ```
-
-<interactive-counter></interactive-counter>
