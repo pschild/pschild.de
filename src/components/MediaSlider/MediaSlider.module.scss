@@ -10,6 +10,39 @@
     width: 500px;
     max-width: 100%;
     margin: 0 auto;
+    position: relative;
+
+    .navArea {
+        position: absolute;
+        height: 100%;
+        width: 40px;
+        z-index: 1;
+        cursor: pointer;
+
+        &.disabled {
+            display: none;
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &.left {
+            span {
+                left: 0;
+            }
+        }
+
+        &.right {
+            right: 0;
+
+            span {
+                right: 0;
+            }
+        }
+    }
 }
 
 .sliderElements {

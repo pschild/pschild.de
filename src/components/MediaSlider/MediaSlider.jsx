@@ -4,6 +4,7 @@ import styles from "./MediaSlider.module.scss";
 import guid from "../../utils/guid";
 
 import ReactSwipeEvents from "react-swipe-events";
+import {FaChevronLeft, FaChevronRight} from "react-icons/lib/fa";
 
 class MediaSlider extends Component {
     constructor(props) {
@@ -16,8 +17,10 @@ class MediaSlider extends Component {
         };
 
         this.handleActiveSliderIndexChanged = this.handleActiveSliderIndexChanged.bind(this);
-        this.handleSwipedLeft = this.handleSwipedLeft.bind(this);
-        this.handleSwipedRight = this.handleSwipedRight.bind(this);
+        this.showNextSlide = this.showNextSlide.bind(this);
+        this.showPreviousSlide = this.showPreviousSlide.bind(this);
+        this.getLeftDisabledClassName = this.getLeftDisabledClassName.bind(this);
+        this.getRightDisabledClassName = this.getRightDisabledClassName.bind(this);
     }
 
     generateSlideId(index) {
@@ -34,32 +37,46 @@ class MediaSlider extends Component {
 
     handleActiveSliderIndexChanged(event) {
         this.setState({
-            activeSlideIndex: event.target.value
+            activeSlideIndex: +event.target.value
         });
     }
 
-    handleSwipedLeft() {
+    showNextSlide() {
         if (this.state.activeSlideIndex < this.state.mediaItems.length - 1) {
             this.setState((state) => ({ activeSlideIndex: state.activeSlideIndex + 1}));
         }
     }
 
-    handleSwipedRight() {
+    showPreviousSlide() {
         if (this.state.activeSlideIndex > 0) {
             this.setState((state) => ({activeSlideIndex: state.activeSlideIndex - 1}));
         }
     }
 
+    getLeftDisabledClassName() {
+        return this.state.activeSlideIndex == 0 ? styles.disabled : '';
+    }
+
+    getRightDisabledClassName() {
+        return this.state.activeSlideIndex == this.state.mediaItems.length - 1 ? styles.disabled : '';
+    }
+
     render() {
         return (
             <div className={styles.cssSlider}>
+                <div className={[styles.navArea, styles.left, this.getLeftDisabledClassName()].join(' ')} onClick={this.showPreviousSlide}>
+                    <span><FaChevronLeft/></span>
+                </div>
+                <div className={[styles.navArea, styles.right, this.getRightDisabledClassName()].join(' ')} onClick={this.showNextSlide}>
+                    <span><FaChevronRight/></span>
+                </div>
                 {
                     this.state.mediaItems
                         .map((item, i) => {
-                            return <input key={i} type="radio" name="slider" id={this.generateSlideId(i)} value={i} onChange={this.handleActiveSliderIndexChanged}></input>
+                            return <input key={i} type="radio" name="slider" id={this.generateSlideId(i)} value={i} onChange={this.handleActiveSliderIndexChanged} checked={this.state.activeSlideIndex == i}></input>
                         })
                 }
-                <ReactSwipeEvents onSwipedLeft={this.handleSwipedLeft} onSwipedRight={this.handleSwipedRight}>
+                <ReactSwipeEvents onSwipedLeft={this.showNextSlide} onSwipedRight={this.showPreviousSlide}>
                     <ul className={styles.sliderElements} style={{ width: this.calcSliderWidth(), left: -(this.state.activeSlideIndex * 100) + '%' }}>
                         {
                             this.state.mediaItems
