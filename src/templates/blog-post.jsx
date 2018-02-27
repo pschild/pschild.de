@@ -4,6 +4,7 @@ import "./b16-tomorrow-dark.css";
 import rehypeReact from "rehype-react";
 import MediaSlider from "../components/MediaSlider/MediaSlider";
 import Link from "gatsby-link";
+import kebabCase from "lodash/kebabCase";
 
 const renderAst = new rehypeReact({
     createElement: React.createElement,
@@ -22,14 +23,14 @@ export default ({ data }) => {
             }
             <hr/>
             <div>
-                Kategorie: <Link to={`/blog/category/${post.frontmatter.category}`}>{post.frontmatter.category}</Link>
+                Kategorie: <Link to={`/blog/category/${kebabCase(post.frontmatter.category)}`}>{post.frontmatter.category}</Link>
             </div>
             <ul>
                 {
                     post.frontmatter.tags.map((tag, i) => {
                         return (
                             <li key={i}>
-                                <Link to={`/blog/tags/${tag}`}>{tag}</Link>
+                                <Link to={`/blog/tags/${kebabCase(tag)}`}>{tag}</Link>
                             </li>
                         )
                     })
