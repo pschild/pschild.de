@@ -1,26 +1,45 @@
 import React from "react";
 
+import FaXing from 'react-icons/lib/fa/xing';
+import FaLinkedin from 'react-icons/lib/fa/linkedin';
+import FaGithub from 'react-icons/lib/fa/github';
+import FaEnvelopeO from 'react-icons/lib/fa/envelope-o';
+
 export default () => (
     <div>
-        <h1>Richard Hamming on Luck</h1>
-        <div>
-            <p>
-                From Richard Hamming’s classic and must-read talk, “<a href="http://www.cs.virginia.edu/~robins/YouAndYourResearch.html">
-                You and Your Research
-            </a>”.
-            </p>
-            <blockquote>
-                <p>
-                    There is indeed an element of luck, and no, there isn’t. The prepared
-                    mind sooner or later finds something important and does it. So yes, it
-                    is luck.{" "}
-                    <em>
-                        The particular thing you do is luck, but that you do something is
-                        not.
-                    </em>
-                </p>
-            </blockquote>
+        <h2>Hi!</h2>
+
+        <h3>Ich bin ...</h3>
+        <div className="flex-container" style={{display: 'flex', alignItems: 'center'}}>
+            <div className="item" style={{flex: 1}}>
+                <img src="./ich.png"/>
+            </div>
+            <div className="item" style={{flex: 2}}>
+                <div>Philippe Schild</div>
+                <div>28 Jahre</div>
+                <div>Fachinformatiker (Anwendungsentwicklung)</div>
+                <div>B.Sc.</div>
+                <div>Wirtschaftsinformatik (M.Sc.), Hochschule Niederrhein</div>
+            </div>
         </div>
-        <p>Posted April 09, 2011</p>
+
+        <h3>Kontakt</h3>
+        <div style={{display: 'flex', alignItems: 'center'}}>
+            <div style={{flex: 1}}>
+                <FaEnvelopeO/>
+            </div>
+            <div style={{flex: 1}}>
+                <FaXing/>
+            </div>
+            <div style={{flex: 1}}>
+                <FaLinkedin/>
+            </div>
+            <div style={{flex: 1}}>
+                <FaGithub/>
+            </div>
+        </div>
+
+        <h3>Lebenslauf</h3>
+        <p>Timeline</p>
     </div>
 );

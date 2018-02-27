@@ -7,10 +7,10 @@ class Navigation extends Component {
         return (
             <nav className={styles.navigation}>
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/contact">Kontakt</Link></li>
+                    <li><Link to="/">Über mich</Link></li>
+                    <li><Link to="/projects">Projekte</Link></li>
                     <li><Link to="/blog">Blog</Link></li>
+                    <li><Link to="/imprint">Impressum</Link></li>
                 </ul>
             </nav>
         );

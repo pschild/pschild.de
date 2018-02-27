@@ -31,7 +31,10 @@ export default ({ data }) => {
                     post.frontmatter.tags.map((tag, i) => {
                         return (
                             <li key={i}>
-                                <Link to={`/blog/tags/${kebabCase(tag)}`}>{tag}</Link>
+                                <Link to={`/blog/tags/${kebabCase(tag)}`}>
+                                    <span>#</span>
+                                    {tag}
+                                </Link>
                             </li>
                         )
                     })

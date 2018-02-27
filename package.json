@@ -18,6 +18,7 @@
     "gatsby-remark-prismjs": "^1.2.15",
     "gatsby-source-filesystem": "^1.5.23",
     "gatsby-transformer-remark": "^1.7.33",
+    "react-icons": "^2.2.7",
     "react-swipe-events": "^1.0.2",
     "rehype-react": "^3.0.2",
     "typography-theme-stern-grove": "^0.15.10"
