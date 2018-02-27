@@ -5,10 +5,10 @@ export default ({data}) => {
     return (
         <div>
             <h1>Projekte</h1>
-            <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+            <h4>{data.allMarkdownRemark.totalCount} Projekte</h4>
             {data.allMarkdownRemark.edges.map(({ node }) => (
                 <div key={node.id}>
-                    <Link to={node.fields.slug}>
+                    <Link to={`projects${node.fields.slug}`}>
                         <h3>
                             {node.frontmatter.title}{" "}
                         </h3>
@@ -23,7 +23,9 @@ export default ({data}) => {
 
 export const query = graphql`
   query ProjectsQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: { frontmatter: { layout: { eq: "project" } } }
+    ){
       totalCount
       edges {
         node {

@@ -1,5 +1,6 @@
 ---
 title: Medientest
+layout: post
 category: "Cat1"
 tags:
   - "Tag1"

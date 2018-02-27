@@ -34,6 +34,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             allMarkdownRemark {
               edges {
                 node {
+                  frontmatter {
+                    layout
+                  }
                   fields {
                     slug
                   }
@@ -45,14 +48,27 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         ).then(result => {
             // console.log(JSON.stringify(result, null, 4));
             result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-                createPage({
-                    path: node.fields.slug,
-                    component: path.resolve(`./src/templates/blog-post.jsx`),
-                    context: {
-                        // Data passed to context is available in page queries as GraphQL variables.
-                        slug: node.fields.slug,
-                    }
-                })
+                if (node.frontmatter.layout === 'post') {
+                    createPage({
+                        path: `blog${node.fields.slug}`,
+                        component: path.resolve(`./src/templates/blog-post.jsx`),
+                        context: {
+                            slug: node.fields.slug,
+                        }
+                    })
+
+                } else if (node.frontmatter.layout === 'project') {
+                    createPage({
+                        path: `projects${node.fields.slug}`,
+                        component: path.resolve(`./src/templates/project.jsx`),
+                        context: {
+                            slug: node.fields.slug,
+                        }
+                    })
+
+                } else {
+                    throw new Error(`Unknown layout ${node.frontmatter.layout}`);
+                }
             });
             resolve()
         })

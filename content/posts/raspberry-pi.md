@@ -1,5 +1,6 @@
 ---
 title: Raspberry Pi
+layout: post
 slug: my-own-slug
 category: "Cat2"
 tags:

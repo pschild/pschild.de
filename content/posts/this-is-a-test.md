@@ -1,5 +1,6 @@
 ---
 title: Test
+layout: post
 category: "Cat2"
 tags:
   - "Tag1"

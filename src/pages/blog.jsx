@@ -8,7 +8,7 @@ export default ({data}) => {
             <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
             {data.allMarkdownRemark.edges.map(({ node }) => (
                 <div key={node.id}>
-                    <Link to={node.fields.slug}>
+                    <Link to={`blog${node.fields.slug}`}>
                         <h3>
                             {node.frontmatter.title}{" "}
                         </h3>
@@ -23,7 +23,9 @@ export default ({data}) => {
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: { frontmatter: { layout: { eq: "post" } } }
+    ){
       totalCount
       edges {
         node {
