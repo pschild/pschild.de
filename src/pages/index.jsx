@@ -1,5 +1,6 @@
 import React from "react";
 import Age from "../components/Age/Age";
+import Timeline from "../components/Timeline/Timeline";
 
 import {FaXing, FaLinkedin, FaGithub, FaEnvelopeO} from 'react-icons/lib/fa';
 
@@ -50,7 +51,7 @@ export default ({ data }) => (
         </div>
 
         <h3>Lebenslauf</h3>
-        <p>Timeline</p>
+        <Timeline items={data.allMarkdownRemark.edges}/>
     </div>
 );
 
@@ -62,6 +63,20 @@ export const query = graphql`
         xingProfile
         linkedinProfile
         githubProfile
+      }
+    }
+    allMarkdownRemark(
+      filter: { frontmatter: { layout: { eq: "timeline" } } }
+      sort: { order: DESC, fields: [frontmatter___dateFrom] }
+    ){
+      edges {
+        node {
+          frontmatter {
+            dateFrom
+            dateTo
+          }
+          html
+        }
       }
     }
   }

@@ -6,8 +6,8 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
     const { createNodeField } = boundActionCreators;
 
     let slug;
-    if (node.internal.type === `MarkdownRemark`) {
-        // console.log(node.frontmatter.slug, `/${_.kebabCase(node.frontmatter.title)}`);
+    if (node.internal.type === `MarkdownRemark` && node.frontmatter.layout !== `timeline`) {
+        // console.log(node.frontmatter.layout, `/${_.kebabCase(node.frontmatter.title)}`);
         if (node.frontmatter.slug) {
             slug = `/${node.frontmatter.slug}/`;
         } else if (node.frontmatter.title) {
@@ -66,8 +66,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                         }
                     })
 
-                } else {
-                    throw new Error(`Unknown layout ${node.frontmatter.layout}`);
                 }
             });
             resolve()
