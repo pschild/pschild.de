@@ -1,6 +1,11 @@
 module.exports = {
     siteMetadata: {
         title: 'pschild.de',
+        mail: 'philippe@pschild.de',
+        mobile: '0176 328 171 08',
+        xingProfile: 'https://www.xing.com/profile/Philippe_Schild',
+        linkedinProfile: 'https://de.linkedin.com/pub/philippe-schild/108/393/754',
+        githubProfile: 'https://github.com/pschild'
     },
     plugins: [
         `gatsby-plugin-sass`,

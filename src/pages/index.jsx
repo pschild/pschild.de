@@ -3,7 +3,7 @@ import Age from "../components/Age/Age";
 
 import {FaXing, FaLinkedin, FaGithub, FaEnvelopeO} from 'react-icons/lib/fa';
 
-export default () => (
+export default ({ data }) => (
     <div>
         <h2>Hi!</h2>
 
@@ -24,25 +24,25 @@ export default () => (
         <h3>Kontakt</h3>
         <div style={{display: 'flex', alignItems: 'center'}}>
             <div style={{flex: 1, textAlign: 'center'}}>
-                <a href="mailto:philippe@pschild.de">
+                <a href={`mailto:${data.site.siteMetadata.mail}`}>
                     <FaEnvelopeO size={40}/>
-                    <div>philippe@pschild.de</div>
+                    <div>{data.site.siteMetadata.mail}</div>
                 </a>
             </div>
             <div style={{flex: 2, textAlign: 'center'}}>
-                <a href="https://www.xing.com/profile/Philippe_Schild" target="_blank">
+                <a href={data.site.siteMetadata.xingProfile} target="_blank">
                     <FaXing size={40}/>
                     <div>Philippe Schild</div>
                 </a>
             </div>
             <div style={{flex: 2, textAlign: 'center'}}>
-                <a href="https://de.linkedin.com/pub/philippe-schild/108/393/754" target="_blank">
+                <a href={data.site.siteMetadata.linkedinProfile} target="_blank">
                     <FaLinkedin size={40}/>
                     <div>Philippe Schild</div>
                 </a>
             </div>
             <div style={{flex: 1, textAlign: 'center'}}>
-                <a href="https://github.com/pschild" target="_blank">
+                <a href={data.site.siteMetadata.githubProfile} target="_blank">
                     <FaGithub size={40}/>
                     <div>pschild</div>
                 </a>
@@ -53,3 +53,16 @@ export default () => (
         <p>Timeline</p>
     </div>
 );
+
+export const query = graphql`
+  query AboutQuery {
+    site {
+      siteMetadata {
+        mail
+        xingProfile
+        linkedinProfile
+        githubProfile
+      }
+    }
+  }
+`;
