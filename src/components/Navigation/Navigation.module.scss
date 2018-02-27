@@ -1,12 +1,53 @@
-.navigation {
-  display: inline;
+.siteNav {
+  margin-left: auto;
+
   ul {
-    float: right;
+    list-style: none;
+    display: flex;
     margin: 0;
+    padding: 0;
+
     li {
       margin: 0 10px;
-      list-style-type: none;
-      display: inline-block;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        color: #fff;
+        display: block;
+
+        .linkIcon {
+          display: none;
+        }
+
+        .linkLabel {
+          display: block;
+        }
+
+        &.active {
+          border-bottom: 2px solid #fff;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .siteNav {
+    ul {
+      li {
+        margin: 0 15px;
+        a {
+          .linkIcon {
+            display: block;
+          }
+          .linkLabel {
+            display: none;
+          }
+        }
+      }
     }
   }
 }

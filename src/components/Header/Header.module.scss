@@ -1,6 +1,21 @@
-.test {
-    background-color: #43acf0;
-    color: #fff;
-    font-size: 24px;
-    height: 50px;
+.siteHeader {
+    background: #227cc0;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+
+    .headerWrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 650px;
+        padding: 0 1rem;
+
+        a {
+            color: #fff;
+        }
+    }
 }

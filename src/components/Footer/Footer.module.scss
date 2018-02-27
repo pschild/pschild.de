@@ -1,0 +1,27 @@
+.siteFooter {
+    background: #227cc0;
+    color: #fff;
+    height: 60px;
+    width: 100%;
+
+    .footerWrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 650px;
+        padding: 0 1rem;
+
+        .footerNavigation {
+            margin-left: auto;
+
+            a {
+                color: #fff;
+
+                &.active {
+                    border-bottom: 2px solid #fff;
+                }
+            }
+        }
+    }
+}
