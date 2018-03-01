@@ -10,7 +10,6 @@ class Timeline extends Component {
     }
 
     generateTimespanLabel(frontmatter) {
-        console.log(frontmatter);
         let dateFrom = moment(frontmatter.dateFrom).format('MM[/]YYYY');
         let dateTo = moment(frontmatter.dateTo).format('MM[/]YYYY');
 

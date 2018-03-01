@@ -2,12 +2,12 @@ import React from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
-import styles from "./styles.scss";
+import styles from "./index.module.scss";
 
 export default ({ children }) => (
     <div>
         <Header/>
-        <div style={{ margin: `0 auto`, maxWidth: 650, padding: `60px 1rem` }}>
+        <div className={styles.contentContainer}>
             {children()}
         </div>
         <Footer/>
