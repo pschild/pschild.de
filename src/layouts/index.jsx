@@ -4,12 +4,26 @@ import Footer from "../components/Footer/Footer";
 
 import styles from "./index.module.scss";
 
-export default ({ children }) => (
+export default ({ data, children }) => (
     <div>
+        <div id="top"></div>
         <Header/>
         <div className={styles.contentContainer}>
             {children()}
         </div>
-        <Footer/>
+        <Footer contactData={data.site.siteMetadata}/>
     </div>
 );
+
+export const query = graphql`
+  query FooterQuery {
+    site {
+      siteMetadata {
+        mail
+        xingProfile
+        linkedinProfile
+        githubProfile
+      }
+    }
+  }
+`;

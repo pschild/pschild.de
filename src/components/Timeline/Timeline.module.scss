@@ -1,3 +1,6 @@
+@import "../../utils/config";
+@import "../../utils/mixins";
+
 .milestones {
   position: relative;
   width: 100%;
@@ -14,7 +17,7 @@
     width: 2px;
     margin-left: -1px;
     height: 100%;
-    background: #282828;
+    background: linear-gradient(to bottom, #fff 0%, #282828 10%, #282828 90%, #fff);
   }
 
   li {
@@ -62,9 +65,9 @@
         display: block;
         width: 12px;
         height: 12px;
-        background: #fff;
+        background: $secondary-color;
         border-radius: 10px;
-        border: 2px solid #227cc0;
+        border: 2px solid $accent-color;
         z-index: 10;
       }
     }

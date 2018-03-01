@@ -1,3 +1,6 @@
+@import "../../utils/config";
+@import "../../utils/mixins";
+
 .siteNav {
   margin-left: auto;
 
@@ -15,8 +18,9 @@
       }
 
       a {
-        color: #fff;
+        color: $secondary-color;
         display: block;
+        background-image: none;
 
         .linkIcon {
           display: none;
@@ -27,7 +31,7 @@
         }
 
         &.active {
-          border-bottom: 2px solid #fff;
+          border-bottom: 2px solid $secondary-color;
         }
       }
     }

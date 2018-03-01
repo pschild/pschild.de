@@ -1,21 +1,25 @@
+@import "../../utils/config";
+@import "../../utils/mixins";
+
 .siteHeader {
-    background: #227cc0;
+    background: $accent-color;
     height: 60px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 99;
+    @include box-shadow;
 
     .headerWrapper {
         height: 100%;
         display: flex;
         align-items: center;
         margin: 0 auto;
-        max-width: 1010px;
+        max-width: $content-max-width;
         padding: 0 1rem;
 
         a {
-            color: #fff;
+            color: $secondary-color;
         }
     }
 }

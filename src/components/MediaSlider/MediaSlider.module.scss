@@ -1,3 +1,6 @@
+@import "../../utils/config";
+@import "../../utils/mixins";
+
 .sliderElements,
 .sliderElements figure,
 .sliderControls {
@@ -74,7 +77,7 @@
 
     .caption {
         display: block;
-        color: #fff;
+        color: $secondary-color;
         position: absolute;
         left: 0;
         bottom: 0;

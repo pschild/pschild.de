@@ -1,0 +1,15 @@
+.characteristicsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .item {
+        padding: 5px
+    }
+}
+
+@media (max-width: 576px) {
+    .characteristicsContainer {
+      flex-direction: column;
+    }
+}

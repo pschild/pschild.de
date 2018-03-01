@@ -1,7 +1,14 @@
+@import "../utils/config";
+
 .contentContainer {
   margin: 0 auto;
-  max-width: 1010px;
+  max-width: $content-max-width;
   padding: 60px 1rem;
+}
+
+/* GLOBAL STYLES */
+body {
+  background-color: $background-color;
 }
 
 img {

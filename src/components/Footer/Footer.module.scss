@@ -1,27 +1,55 @@
+@import "../../utils/config";
+@import "../../utils/mixins";
+
 .siteFooter {
-    background: #227cc0;
-    color: #fff;
-    height: 60px;
+    background: $accent-color;
+    color: $secondary-color;
     width: 100%;
 
     .footerWrapper {
-        height: 100%;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         margin: 0 auto;
-        max-width: 1010px;
+        max-width: $content-max-width;
         padding: 0 1rem;
+        font-size: 14px;
 
-        .footerNavigation {
-            margin-left: auto;
+        .column {
+            display: flex;
+            height: 40px;
+
+            * {
+                align-self: center;
+            }
 
             a {
-                color: #fff;
+                color: $secondary-color;
+                background-image: none;
 
                 &.active {
-                    border-bottom: 2px solid #fff;
+                    border-bottom: 2px solid $secondary-color;
                 }
             }
+        }
+
+        .contactLinksContainer {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0;
+
+            li {
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .siteFooter {
+        .footerWrapper {
+            flex-direction: column-reverse;
         }
     }
 }

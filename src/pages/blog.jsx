@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import BlogPreview from "../components/BlogPreview/BlogPreview";
 
 export default ({data}) => {
     return (
@@ -7,15 +7,7 @@ export default ({data}) => {
             <h1>Blog</h1>
             <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
             {data.allMarkdownRemark.edges.map(({ node }) => (
-                <div key={node.id}>
-                    <Link to={`blog${node.fields.slug}`}>
-                        <h3>
-                            {node.frontmatter.title}{" "}
-                        </h3>
-                        <p>{node.excerpt}</p>
-                    </Link>
-                    <hr/>
-                </div>
+                <BlogPreview key={node.id} postNode={node}/>
             ))}
         </div>
     )
