@@ -16,13 +16,13 @@ class Navigation extends Component {
                         </Link>
                     </li>
                     <li>
-                        <Link exact to="/projects" activeClassName={styles.active}>
+                        <Link to="projects" activeClassName={styles.active}>
                             <span className={styles.linkIcon}><FaCogs size={25}/></span>
                             <span className={styles.linkLabel}>Projekte</span>
                         </Link>
                     </li>
                     <li>
-                        <Link exact to="/blog" activeClassName={styles.active}>
+                        <Link to="blog" activeClassName={styles.active}>
                             <span className={styles.linkIcon}><FaPencil size={25}/></span>
                             <span className={styles.linkLabel}>Blog</span>
                         </Link>
