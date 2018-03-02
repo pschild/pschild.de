@@ -3,6 +3,7 @@ import Link from "gatsby-link";
 import {MdKeyboardArrowUp} from "react-icons/lib/md";
 import {FaXing, FaLinkedin, FaGithub, FaEnvelopeO} from "react-icons/lib/fa";
 import styles from "./Footer.module.scss";
+import NavigationLink from "../NavigationLink/NavigationLink";
 
 class Footer extends Component {
     render() {
@@ -10,7 +11,8 @@ class Footer extends Component {
             <footer className={styles.siteFooter}>
                 <div className={styles.footerWrapper}>
                     <div className={styles.column}>
-                        <Link to="#top"><MdKeyboardArrowUp size={15}/> nach oben</Link>
+                        <MdKeyboardArrowUp size={15}/>
+                        <NavigationLink exact to="/#top" size={14}>nach oben</NavigationLink>
                     </div>
                     <div className={styles.column}>
                         <ul className={styles.contactLinksContainer}>
@@ -21,9 +23,7 @@ class Footer extends Component {
                         </ul>
                     </div>
                     <div className={styles.column}>
-                        <Link exact to="/imprint" activeClassName={styles.active}>
-                            Impressum
-                        </Link>
+                        <NavigationLink to="/imprint" size={14}>Impressum</NavigationLink>
                     </div>
                 </div>
             </footer>

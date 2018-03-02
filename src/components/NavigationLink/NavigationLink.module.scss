@@ -1,0 +1,38 @@
+@import "../../utils/config";
+@import "../../utils/mixins";
+
+a.myLink {
+  display: inline-block;
+  outline: none;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.35em;
+  overflow: hidden;
+  padding: 0 4px;
+
+  &:hover span, &:focus span, &.active span {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  & span {
+    position: relative;
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+
+    &:before {
+      position: absolute;
+      top: 100%;
+      content: attr(data-hover);
+      white-space: nowrap;
+      font-weight: 700;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}

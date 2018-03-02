@@ -26,10 +26,6 @@
             a {
                 color: $secondary-color;
                 background-image: none;
-
-                &.active {
-                    border-bottom: 2px solid $secondary-color;
-                }
             }
         }
 

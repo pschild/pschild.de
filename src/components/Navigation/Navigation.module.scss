@@ -2,8 +2,6 @@
 @import "../../utils/mixins";
 
 .siteNav {
-  margin-left: auto;
-
   ul {
     list-style: none;
     display: flex;
@@ -12,27 +10,19 @@
 
     li {
       margin: 0 10px;
+      display: flex;
+      align-items: center;
 
       &:last-child {
         margin-right: 0;
       }
 
-      a {
-        color: $secondary-color;
+      .linkIcon {
+        display: none;
+      }
+
+      .linkLabel {
         display: block;
-        background-image: none;
-
-        .linkIcon {
-          display: none;
-        }
-
-        .linkLabel {
-          display: block;
-        }
-
-        &.active {
-          border-bottom: 2px solid $secondary-color;
-        }
       }
     }
   }
@@ -43,13 +33,12 @@
     ul {
       li {
         margin: 0 15px;
-        a {
-          .linkIcon {
-            display: block;
-          }
-          .linkLabel {
-            display: none;
-          }
+
+        .linkIcon {
+          display: block;
+        }
+        .linkLabel {
+          display: none;
         }
       }
     }
