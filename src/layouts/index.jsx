@@ -6,7 +6,6 @@ import styles from "./index.module.scss";
 
 export default ({ data, children }) => (
     <div>
-        <div id="top"></div>
         <Header/>
         <div className={styles.contentContainer}>
             {children()}
