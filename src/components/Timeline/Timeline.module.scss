@@ -67,7 +67,7 @@
         height: 12px;
         background: $secondary-color;
         border-radius: 10px;
-        border: 2px solid $accent-color;
+        border: 2px solid $primary-color;
         z-index: 10;
         transition: transform .1s linear;
       }
@@ -75,7 +75,7 @@
       &:hover {
         &:before {
           transform: scale(1.2);
-          background: $accent-color;
+          background: $primary-color;
         }
       }
     }

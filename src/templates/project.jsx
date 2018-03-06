@@ -1,5 +1,5 @@
 import React from "react";
-import "./b16-tomorrow-dark.css";
+import "./b16-tomorrow-dark.scss";
 
 import rehypeReact from "rehype-react";
 import MediaSlider from "../components/MediaSlider/MediaSlider";

@@ -1,5 +1,5 @@
 import React from "react";
-import "./b16-tomorrow-dark.css";
+import "./b16-tomorrow-dark.scss";
 import styles from "./blog-post.module.scss";
 
 import rehypeReact from "rehype-react";
