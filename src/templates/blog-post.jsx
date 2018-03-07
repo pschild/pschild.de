@@ -4,13 +4,15 @@ import styles from "./blog-post.module.scss";
 
 import rehypeReact from "rehype-react";
 import MediaSlider from "../components/MediaSlider/MediaSlider";
+import ImageGallery from "../components/ImageGallery/ImageGallery";
 import Link from "gatsby-link";
 import kebabCase from "lodash/kebabCase";
 
 const renderAst = new rehypeReact({
     createElement: React.createElement,
     components: {
-        "media-slider": MediaSlider
+        "media-slider": MediaSlider,
+        "image-gallery": ImageGallery
     },
 }).Compiler;
 

@@ -3,13 +3,15 @@ import "./b16-tomorrow-dark.scss";
 
 import rehypeReact from "rehype-react";
 import MediaSlider from "../components/MediaSlider/MediaSlider";
+import ImageGallery from "../components/ImageGallery/ImageGallery";
 import moment from "moment";
 import "moment/locale/de";
 
 const renderAst = new rehypeReact({
     createElement: React.createElement,
     components: {
-        "media-slider": MediaSlider
+        "media-slider": MediaSlider,
+        "image-gallery": ImageGallery
     },
 }).Compiler;
 
