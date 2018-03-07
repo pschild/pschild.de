@@ -1,0 +1,54 @@
+@import "../../utils/config";
+@import "../../utils/mixins";
+
+.lightbox {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  background: rgba(0,0,0, .9);
+  color: #fff;
+  //transition: opacity .25s ease;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 90%;
+    max-width: 90%;
+  }
+
+  .nextButton {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .previousButton {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    z-index: 9999;
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../utils/config";
+@import "../../utils/mixins";
+
+.imageWithLightbox {
+  .imageContainer {
+    max-width: 500px;
+    margin: 0 auto;
+
+    img {
+      cursor: pointer;
+    }
+  }
+}

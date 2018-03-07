@@ -7,12 +7,14 @@ import MediaSlider from "../components/MediaSlider/MediaSlider";
 import ImageGallery from "../components/ImageGallery/ImageGallery";
 import Link from "gatsby-link";
 import kebabCase from "lodash/kebabCase";
+import ImageWithLightbox from "../components/ImageWithLightbox/ImageWithLightbox";
 
 const renderAst = new rehypeReact({
     createElement: React.createElement,
     components: {
         "media-slider": MediaSlider,
-        "image-gallery": ImageGallery
+        "image-gallery": ImageGallery,
+        "image-with-lightbox": ImageWithLightbox
     },
 }).Compiler;
 

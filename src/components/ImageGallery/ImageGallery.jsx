@@ -2,6 +2,7 @@ import React, {Component} from "react";
 
 import styles from "./ImageGallery.module.scss";
 import guid from "../../utils/guid";
+import Lightbox from "../Lightbox/Lightbox";
 
 class ImageGallery extends Component {
     constructor(props) {
@@ -14,6 +15,9 @@ class ImageGallery extends Component {
         };
 
         this.handleSelectionChange = this.handleSelectionChange.bind(this);
+        this.handleLightboxNext = this.handleLightboxNext.bind(this);
+        this.handleLightboxPrevious = this.handleLightboxPrevious.bind(this);
+        this.handleLightboxClosed = this.handleLightboxClosed.bind(this);
     }
 
     prefixWithUuid(suffix) {
@@ -23,6 +27,24 @@ class ImageGallery extends Component {
     handleSelectionChange(event) {
         this.setState({
             selectedIndex: +event.target.value
+        });
+    }
+
+    handleLightboxNext() {
+        this.setState({
+            selectedIndex: this.state.selectedIndex + 1
+        });
+    }
+
+    handleLightboxPrevious() {
+        this.setState({
+            selectedIndex: this.state.selectedIndex - 1
+        });
+    }
+
+    handleLightboxClosed() {
+        this.setState({
+            selectedIndex: -1
         });
     }
 
@@ -42,6 +64,7 @@ class ImageGallery extends Component {
                                     </label>
 
                                     <input type="radio" name="gallery-radios" id={this.prefixWithUuid(`image-${i}`)} value={i} onChange={this.handleSelectionChange} checked={this.state.selectedIndex == i}/>
+                                    <Lightbox hasNext={i < this.state.mediaItems.length - 1} hasPrevious={i > 0} isOpen={this.state.selectedIndex == i} mediaItem={item} onNext={this.handleLightboxNext} onPrevious={this.handleLightboxPrevious} onClose={this.handleLightboxClosed} />
                                 </div>
                             )
                         })
