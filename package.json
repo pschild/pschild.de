@@ -21,6 +21,7 @@
     "moment": "^2.20.1",
     "react-icons": "^2.2.7",
     "react-swipe-events": "^1.0.2",
+    "react-waypoint": "^8.0.1",
     "rehype-react": "^3.0.2",
     "typography-theme-lincoln": "^0.15.11",
     "typography-theme-stern-grove": "^0.15.10"

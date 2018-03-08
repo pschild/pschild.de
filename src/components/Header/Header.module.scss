@@ -2,26 +2,30 @@
 @import "../../utils/mixins";
 
 .siteHeader {
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  transition: all .5s ease-out;
+
+  &.detached {
     background: $primary-color;
-    height: 60px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 99;
     @include box-shadow;
+  }
 
-    .headerWrapper {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0 auto;
-        max-width: $content-max-width;
-        padding: 0 1rem;
+  .headerWrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: $content-max-width;
+    padding: 0 1rem;
 
-        a {
-            color: $secondary-color;
-            background-image: none;
-        }
+    a {
+      color: $secondary-color;
+      background-image: none;
     }
+  }
 }

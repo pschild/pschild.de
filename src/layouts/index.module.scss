@@ -1,9 +1,10 @@
 @import "../utils/config";
 
 .contentContainer {
-  margin: 0 auto;
+  margin: 175px auto 0 auto;
   max-width: $content-max-width;
-  padding: 60px 1rem;
+  padding: 1rem;
+  background-color: #fbfbfb;
 }
 
 /* GLOBAL STYLES */

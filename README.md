@@ -6,3 +6,4 @@
 
 ## Plugins
 * http://gorangajic.github.io/react-icons/index.html
+* https://github.com/brigade/react-waypoint

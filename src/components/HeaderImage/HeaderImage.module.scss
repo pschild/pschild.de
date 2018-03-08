@@ -1,0 +1,14 @@
+@import "../../utils/config";
+@import "../../utils/mixins";
+
+.headerImageWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}

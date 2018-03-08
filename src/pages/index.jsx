@@ -1,9 +1,11 @@
 import React from "react";
 import AboutMe from "../components/AboutMe/AboutMe";
 import Timeline from "../components/Timeline/Timeline";
+import HeaderImage from "../components/HeaderImage/HeaderImage";
 
 export default ({ data }) => (
     <div>
+        <HeaderImage imagePath={`./1920.jpg`}/>
         <h2>Hi!</h2>
 
         <h3>Ich bin ...</h3>

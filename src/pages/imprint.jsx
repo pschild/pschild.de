@@ -1,7 +1,9 @@
 import React from "react";
+import HeaderImage from "../components/HeaderImage/HeaderImage";
 
 export default ({ data }) => (
     <div>
+        <HeaderImage imagePath={`./1920.jpg`}/>
         <h2>Angaben gemäß § 5 TMG:</h2>
         <div>
             <p>
