@@ -1,3 +1,29 @@
+@import "./config";
+
 @mixin box-shadow {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.12);
+}
+
+@mixin breakpoint-sm-or-less {
+  @media (max-width: #{$sm-max-width}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md-or-less {
+  @media (max-width: #{$md-max-width}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lg-or-less {
+  @media (max-width: #{$lg-max-width}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xl-or-less {
+  @media (max-width: #{$xl-max-width}) {
+    @content;
+  }
 }

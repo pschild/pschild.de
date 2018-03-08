@@ -52,25 +52,25 @@
     }
   }
 
-  @media (max-width: 1200px) {
+  @include breakpoint-xl-or-less {
     .grid .gridItemWrapper {
       flex: 0 0 calc(20% - 5px);
     }
   }
 
-  @media (max-width: 992px) {
+  @include breakpoint-lg-or-less {
     .grid .gridItemWrapper {
       flex: 0 0 calc(33.3333% - 5px);
     }
   }
 
-  @media (max-width: 768px) {
+  @include breakpoint-md-or-less {
     .grid .gridItemWrapper {
       flex: 0 0 calc(50% - 5px);
     }
   }
 
-  @media (max-width: 400px) {
+  @include breakpoint-sm-or-less {
     .grid .gridItemWrapper {
       flex: 0 0 calc(100% - 5px);
     }
