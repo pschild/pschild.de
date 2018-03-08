@@ -45,7 +45,7 @@ class ImageGallery extends Component {
     render() {
         return (
             <div className={styles.imageGallery}>
-                <div className={[styles.grid, styles.modern].join(' ')}>
+                <div className={styles.grid}>
                 {
                     this.state.mediaItems
                         .map((item, i) => {
