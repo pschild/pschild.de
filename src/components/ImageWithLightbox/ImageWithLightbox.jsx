@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 
 import styles from "./ImageWithLightbox.module.scss";
-import guid from "../../utils/guid";
 import Lightbox from "../Lightbox/Lightbox";
 
 class ImageWithLightbox extends Component {
@@ -14,22 +13,17 @@ class ImageWithLightbox extends Component {
         }
 
         this.state = {
-            uuid: guid(),
             isLightboxOpen: false,
             mediaItem: elementChildren[0]
         };
 
-        this.handleSelectionChange = this.handleSelectionChange.bind(this);
+        this.handleImageClicked = this.handleImageClicked.bind(this);
         this.handleLightboxClosed = this.handleLightboxClosed.bind(this);
     }
 
-    prefixWithUuid(suffix) {
-        return `${this.state.uuid}-${suffix}`;
-    }
-
-    handleSelectionChange(event) {
+    handleImageClicked() {
         this.setState({
-            isLightboxOpen: event.target.checked
+            isLightboxOpen: !this.state.isLightboxOpen
         });
     }
 
@@ -43,10 +37,7 @@ class ImageWithLightbox extends Component {
         return (
             <div className={styles.imageWithLightbox}>
                 <div className={styles.imageContainer}>
-                    <label htmlFor={this.prefixWithUuid(`image`)}>
-                        <img src={this.state.mediaItem.props.src} />
-                    </label>
-                    <input type="checkbox" id={this.prefixWithUuid(`image`)} value="open" onChange={this.handleSelectionChange} checked={this.state.isLightboxOpen}/>
+                    <img src={this.state.mediaItem.props.src} onClick={this.handleImageClicked} />
                     <Lightbox isOpen={this.state.isLightboxOpen} mediaItem={this.state.mediaItem} onClose={this.handleLightboxClosed} />
                 </div>
             </div>

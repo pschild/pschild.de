@@ -2,10 +2,6 @@
 @import "../../utils/mixins";
 
 .imageGallery {
-  input[name=gallery-radios] {
-    display: none;
-  }
-
   .grid {
     .gridItemWrapper {
       position: relative;
@@ -44,10 +40,6 @@
         width: 100%;
         height: 100%;
         z-index: 90;
-      }
-
-      input.modalState {
-
       }
     }
 
