@@ -3,7 +3,7 @@ import HeaderImage from "../components/HeaderImage/HeaderImage";
 
 export default ({ data }) => (
     <div>
-        <HeaderImage imagePath={`./1920.jpg`}/>
+        <HeaderImage imagePath={data.site.siteMetadata.imprintHeaderImagePath}/>
         <h2>Angaben gemäß § 5 TMG:</h2>
         <div>
             <p>
@@ -38,6 +38,7 @@ export const query = graphql`
       siteMetadata {
         mobile
         mail
+        imprintHeaderImagePath
       }
     }
   }

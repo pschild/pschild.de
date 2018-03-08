@@ -5,7 +5,7 @@ import HeaderImage from "../components/HeaderImage/HeaderImage";
 export default ({data}) => {
     return (
         <div>
-            <HeaderImage imagePath={`./Spotlight.jpg`}/>
+            <HeaderImage imagePath={data.site.siteMetadata.blogHeaderImagePath}/>
             <h1>Blog</h1>
             <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
             {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -17,6 +17,11 @@ export default ({data}) => {
 
 export const query = graphql`
   query IndexQuery {
+    site {
+      siteMetadata {
+        blogHeaderImagePath
+      }
+    }
     allMarkdownRemark(
       filter: { frontmatter: { layout: { eq: "post" } } }
     ){

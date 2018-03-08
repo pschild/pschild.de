@@ -5,7 +5,7 @@ import HeaderImage from "../components/HeaderImage/HeaderImage";
 
 export default ({ data }) => (
     <div>
-        <HeaderImage imagePath={`./1920.jpg`}/>
+        <HeaderImage imagePath={data.site.siteMetadata.homeHeaderImagePath}/>
         <h2>Hi!</h2>
 
         <h3>Ich bin ...</h3>
@@ -18,6 +18,11 @@ export default ({ data }) => (
 
 export const query = graphql`
   query TimelineQuery {
+    site {
+      siteMetadata {
+        homeHeaderImagePath
+      }
+    }
     allMarkdownRemark(
       filter: { frontmatter: { layout: { eq: "timeline" } } }
       sort: { order: DESC, fields: [frontmatter___dateFrom] }
