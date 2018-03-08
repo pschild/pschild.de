@@ -5,13 +5,14 @@ import lincolnTheme from "typography-theme-lincoln";
 const linkColor = '#E74C3C';
 
 lincolnTheme.googleFonts = [{
-    name: 'Varela',
-    styles: ['400']
+    name: 'Roboto',
+    styles: ['100', '400']
 }, {
     name: 'Lora',
     styles: ['400', '400i', '700']
 }];
-lincolnTheme.headerFontFamily = ['Varela', 'sans-serif'];
+lincolnTheme.headerFontFamily = ['Roboto', 'sans-serif'];
+lincolnTheme.headerWeight = '100';
 lincolnTheme.overrideThemeStyles = ({ rhythm }, options) => ({
     'a': {
         textShadow: 'none',
