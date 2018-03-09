@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Link from "gatsby-link";
 import Navigation from "../Navigation/Navigation";
 import styles from "./Header.module.scss";
+import NavigationLink from "../NavigationLink/NavigationLink";
 
 class Header extends Component {
     constructor(props) {
@@ -16,7 +16,7 @@ class Header extends Component {
         return (
             <header className={headerClassNames.join(' ')}>
                 <div className={styles.headerWrapper}>
-                    <Link to="/" className="logo">pschild.de</Link>
+                    <NavigationLink exact to="/" size={16}>pschild.de</NavigationLink>
                     <Navigation></Navigation>
                 </div>
             </header>

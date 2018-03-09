@@ -9,11 +9,19 @@ class NavigationLink extends Component {
             style.fontSize = `${this.props.size}px`;
         }
 
-        return (
-            <Link {...this.props} activeClassName={styles.active} className={[styles.myLink, ...this.props.className].join(' ')} style={style}>
-                <span data-hover={this.props.children}>{this.props.children}</span>
-            </Link>
-        );
+        if (this.props.to) {
+            return (
+                <Link {...this.props} activeClassName={styles.active} className={['nav', styles.linkEffect, ...this.props.className].join(' ')} style={style}>
+                    {this.props.children}
+                </Link>
+            )
+        } else {
+            return (
+                <a {...this.props} className={['nav', styles.linkEffect, ...this.props.className].join(' ')} style={style}>
+                    {this.props.children}
+                </a>
+            )
+        }
     }
 }
 

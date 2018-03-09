@@ -10,10 +10,10 @@ class Footer extends Component {
                 <div className={styles.footerWrapper}>
                     <div className={styles.column}>
                         <ul className={styles.contactLinksContainer}>
-                            <li><a href={`mailto:${this.props.contactData.mail}`}><FaEnvelopeO size={25}/></a></li>
-                            <li><a href={this.props.contactData.xingProfile} target="_blank"><FaXing size={25}/></a></li>
-                            <li><a href={this.props.contactData.linkedinProfile} target="_blank"><FaLinkedin size={25}/></a></li>
-                            <li><a href={this.props.contactData.githubProfile} target="_blank"><FaGithub size={25}/></a></li>
+                            <li><NavigationLink href={`mailto:${this.props.contactData.mail}`}><FaEnvelopeO size={25}/></NavigationLink></li>
+                            <li><NavigationLink href={this.props.contactData.xingProfile} target="_blank"><FaXing size={25}/></NavigationLink></li>
+                            <li><NavigationLink href={this.props.contactData.linkedinProfile} target="_blank"><FaLinkedin size={25}/></NavigationLink></li>
+                            <li><NavigationLink href={this.props.contactData.githubProfile} target="_blank"><FaGithub size={25}/></NavigationLink></li>
                         </ul>
                     </div>
                     <div className={styles.column}>

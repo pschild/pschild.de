@@ -18,6 +18,11 @@ lincolnTheme.overrideThemeStyles = ({ rhythm }, options) => ({
         textShadow: 'none',
         color: linkColor,
         backgroundImage: 'linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, ' + linkColor + ' 1px, ' + linkColor + ' 2px, rgba(0, 0, 0, 0) 2px)'
+    },
+    'a.nav': {
+        fontFamily: 'Roboto, sans-serif',
+        fontWeight: '400',
+        backgroundImage: 'none'
     }
 });
 

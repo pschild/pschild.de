@@ -2,7 +2,7 @@
 @import "../../utils/mixins";
 
 .siteHeader {
-  height: 60px;
+  height: $header-height;
   position: fixed;
   width: 100%;
   top: 0;
@@ -22,10 +22,5 @@
     margin: 0 auto;
     max-width: $content-max-width;
     padding: 0 1rem;
-
-    a {
-      color: $secondary-color;
-      background-image: none;
-    }
   }
 }
