@@ -2,7 +2,7 @@ import Typography from "typography";
 import sternGroveTheme from "typography-theme-stern-grove";
 import lincolnTheme from "typography-theme-lincoln";
 
-const linkColor = '#E74C3C';
+const linkColor = '#3498DB';
 
 lincolnTheme.googleFonts = [{
     name: 'Roboto',
