@@ -7,7 +7,9 @@ class HeaderImage extends Component {
             backgroundImage: `url(${this.props.imagePath})`
         };
         return (
-            <div id="header-image" className={styles.headerImageWrapper} style={backgroundStyle}></div>
+            <div id="header-image" className={styles.headerImageWrapper} style={backgroundStyle}>
+                {this.props.children}
+            </div>
         );
     }
 }

@@ -3,7 +3,9 @@ import HeaderImage from "../components/HeaderImage/HeaderImage";
 
 export default ({ data }) => (
     <div>
-        <HeaderImage imagePath={data.site.siteMetadata.imprintHeaderImagePath}/>
+        <HeaderImage imagePath={data.site.siteMetadata.imprintHeaderImagePath}>
+            <h1>Impressum</h1>
+        </HeaderImage>
         <h2>Angaben gemäß § 5 TMG:</h2>
         <div>
             <p>

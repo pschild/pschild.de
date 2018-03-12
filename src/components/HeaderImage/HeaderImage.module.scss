@@ -2,13 +2,24 @@
 @import "../../utils/mixins";
 
 .headerImageWrapper {
+  display: flex;
+  justify-content: center;
+
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 350px;
+  height: $header-image-height;
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+
+  h1 {
+    align-self: center;
+    color: $secondary-color;
+    @include text-shadow;
+    font-size: 50px;
+    white-space: nowrap;
+  }
 }

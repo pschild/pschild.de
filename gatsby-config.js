@@ -7,10 +7,10 @@ module.exports = {
         linkedinProfile: 'https://de.linkedin.com/pub/philippe-schild/108/393/754',
         githubProfile: 'https://github.com/pschild',
 
-        homeHeaderImagePath: './1920.jpg',
-        projectsHeaderImagePath: './Spotlight.jpg',
-        blogHeaderImagePath: './bulbs.jpg',
-        imprintHeaderImagePath: './1920.jpg',
+        homeHeaderImagePath: './home.jpg',
+        projectsHeaderImagePath: './projects.jpg',
+        blogHeaderImagePath: './blog.jpg',
+        imprintHeaderImagePath: './imprint.jpg',
     },
     plugins: [
         `gatsby-plugin-sass`,

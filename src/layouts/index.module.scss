@@ -1,7 +1,7 @@
 @import "../utils/config";
 
 .contentContainer {
-  margin: 175px auto 0 auto;
+  margin: $header-image-height auto 0 auto;
   max-width: $content-max-width;
   padding: 1rem;
   background-color: #fbfbfb;

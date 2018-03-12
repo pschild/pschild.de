@@ -4,6 +4,10 @@
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.12);
 }
 
+@mixin text-shadow {
+  text-shadow: 1px 1px 10px rgba(70,70,70,1);
+}
+
 @mixin breakpoint-sm-or-less {
   @media (max-width: #{$sm-max-width}) {
     @content;

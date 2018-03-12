@@ -7,8 +7,9 @@ import HeaderImage from "../components/HeaderImage/HeaderImage";
 export default ({data}) => {
     return (
         <div>
-            <HeaderImage imagePath={data.site.siteMetadata.projectsHeaderImagePath}/>
-            <h1>Projekte</h1>
+            <HeaderImage imagePath={data.site.siteMetadata.projectsHeaderImagePath}>
+                <h1>Projekte</h1>
+            </HeaderImage>
             <h4>{data.allMarkdownRemark.totalCount} Projekte</h4>
             {data.allMarkdownRemark.edges.map(({ node }) => (
                 <div key={node.id}>
