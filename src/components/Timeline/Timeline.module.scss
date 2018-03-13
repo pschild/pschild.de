@@ -1,6 +1,10 @@
 @import "../../utils/config";
 @import "../../utils/mixins";
 
+.headline {
+  text-align: center;
+}
+
 .milestones {
   position: relative;
   width: 100%;
@@ -17,7 +21,9 @@
     width: 2px;
     margin-left: -1px;
     height: 100%;
-    background: linear-gradient(to bottom, #fff 0%, #282828 10%, #282828 90%, #fff);
+    background: linear-gradient(to bottom, #fff 0%, #282828 5%, #282828 95%, $background-color);
+
+    transition: all .5s ease-in-out;
   }
 
   li {
@@ -28,12 +34,28 @@
       margin: 0;
     }
 
+    .milestoneIcon {
+      position: absolute;
+      left: -10px;
+      top: -2px;
+      z-index: 10;
+      background: $background-color;
+      padding-bottom: 3px;
+
+      transition: transform .2s ease-in-out;
+    }
+
     .direction-l {
       position: relative;
       width: 50%;
       float: left;
       padding-right: 20px;
       text-align: right;
+
+      .milestoneIcon {
+        left: unset;
+        right: -10px;
+      }
     }
 
     .direction-r {
@@ -41,10 +63,6 @@
       width: 50%;
       float: right;
       padding-left: 20px;
-
-      &:before {
-        left: -6px;
-      }
     }
 
     .direction-l, .direction-r {
@@ -57,25 +75,36 @@
       -webkit-hyphens: auto;
       hyphens: auto;
 
-      &:before {
-        position: absolute;
-        top: 6px;
-        right: -6px;
-        content: ' ';
-        display: block;
-        width: 12px;
-        height: 12px;
-        background: $secondary-color;
-        border-radius: 10px;
-        border: 2px solid $primary-color;
-        z-index: 10;
-        transition: transform .1s linear;
-      }
+      transition: all .5s ease-in-out;
 
       &:hover {
-        &:before {
+        .milestoneIcon {
           transform: scale(1.2);
-          background: $primary-color;
+        }
+      }
+    }
+  }
+
+  @include breakpoint-md-or-less {
+    &:before {
+      left: 0;
+    }
+
+    li {
+      .direction-r {
+        width: 100%;
+      }
+
+      .direction-l {
+        width: 100%;
+        float: right;
+        padding-left: 20px;
+        padding-right: 0;
+        text-align: left;
+
+        .milestoneIcon {
+          right: unset;
+          left: -10px;
         }
       }
     }

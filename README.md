@@ -7,3 +7,6 @@
 ## Plugins
 * http://gorangajic.github.io/react-icons/index.html
 * https://github.com/brigade/react-waypoint
+
+## Helpful Links
+* https://www.emojicopy.com/

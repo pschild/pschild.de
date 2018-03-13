@@ -10,7 +10,6 @@ export default ({ data }) => (
         </HeaderImage>
         <AboutMe contactData={data.site.siteMetadata}/>
 
-        <h3>Lebenslauf</h3>
         <Timeline items={data.allMarkdownRemark.edges}/>
     </div>
 );
@@ -35,6 +34,8 @@ export const query = graphql`
           frontmatter {
             dateFrom
             dateTo
+            singleDay
+            category
           }
           html
         }
