@@ -1,0 +1,9 @@
+@import "../../utils/config";
+@import "../../utils/mixins";
+
+.projectPreviewContainer {
+    background: $secondary-color;
+    @include box-shadow;
+    padding: 36px 48px;
+    margin-bottom: 24px;
+}

@@ -1,8 +1,6 @@
 import React from "react";
-import Link from "gatsby-link";
-import moment from "moment/moment";
-import "moment/locale/de";
 import HeaderImage from "../components/HeaderImage/HeaderImage";
+import ProjectList from "../components/ProjectList/ProjectList";
 
 export default ({data}) => {
     return (
@@ -11,16 +9,7 @@ export default ({data}) => {
                 <h1>Projekte</h1>
             </HeaderImage>
             <h4>{data.allMarkdownRemark.totalCount} Projekte</h4>
-            {data.allMarkdownRemark.edges.map(({ node }) => (
-                <div key={node.id}>
-                    <Link to={`projects${node.fields.slug}`}>
-                        <h3>{node.frontmatter.title}</h3>
-                        <h4>{moment(node.frontmatter.date).format('LL')}</h4>
-                        <p>{node.excerpt}</p>
-                    </Link>
-                    <hr/>
-                </div>
-            ))}
+            <ProjectList projectList={data.allMarkdownRemark.edges}/>
         </div>
     )
 };
