@@ -6,7 +6,7 @@ import HeaderImage from "../components/HeaderImage/HeaderImage";
 export default ({ data }) => (
     <div>
         <HeaderImage imagePath={data.site.siteMetadata.homeHeaderImagePath}>
-            <h1>Über mich</h1>
+            <h1>Hi!</h1>
         </HeaderImage>
         <AboutMe contactData={data.site.siteMetadata}/>
 

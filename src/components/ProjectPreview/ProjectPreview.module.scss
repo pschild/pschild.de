@@ -2,5 +2,7 @@
 @import "../../utils/mixins";
 
 .projectPreviewContainer {
-    @include card;
+  flex: 1;
+  margin: 5px;
+  @include card;
 }

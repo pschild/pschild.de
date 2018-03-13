@@ -7,9 +7,8 @@ class AboutMe extends Component {
     render() {
         return (
             <div className={styles.characteristicsContainer}>
-                <h2>Hi!</h2>
                 <img className={styles.profileImage} src="./ich.png"/>
-                <h3>Philippe Schild</h3>
+                <h2>Philippe Schild</h2>
                 <ul className={styles.factsContainer}>
                     <li className={styles.fact}>🎈 <Age/> Jahre</li>
                     <li className={styles.fact}>🏡 Goch, NRW</li>

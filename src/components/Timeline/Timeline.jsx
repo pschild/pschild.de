@@ -39,7 +39,7 @@ class Timeline extends Component {
     render() {
         return (
             <div>
-                <h3 className={styles.headline}>Lebenslauf</h3>
+                <h2 className={styles.headline}>Lebenslauf</h2>
                 <ul className={styles.milestones}>
                     {
                         this.props.items
