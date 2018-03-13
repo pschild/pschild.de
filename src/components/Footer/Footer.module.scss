@@ -23,25 +23,6 @@
         align-self: center;
       }
     }
-
-    .contactLinksContainer {
-      list-style-type: none;
-      display: flex;
-      justify-content: space-evenly;
-      margin: 0;
-
-      li {
-        margin: 0 10px;
-
-        &:first-child {
-          margin-left: 0;
-        }
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-    }
   }
 }
 

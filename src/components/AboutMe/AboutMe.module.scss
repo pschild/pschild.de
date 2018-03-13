@@ -2,17 +2,42 @@
 @import "../../utils/mixins";
 
 .characteristicsContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  @include card;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
 
-    .item {
-        padding: 5px
+  a {
+    color: $primary-color;
+    &:before {
+      background: $primary-color;
     }
-}
+  }
 
-@media (max-width: 576px) {
-    .characteristicsContainer {
-        flex-direction: column;
+  h3 {
+    margin-top: 0;
+  }
+
+  .profileImage {
+    border-radius: 50%;
+  }
+
+  .factsContainer {
+    margin: 20px 0;
+    list-style-type: none;
+
+    .fact {
+      white-space: nowrap;
+      display: inline-block;
+      margin: 0 5px;
+
+      &:before {
+        content: " · ";
+      }
+
+      &:first-child:before {
+        content: ""
+      }
     }
+  }
 }

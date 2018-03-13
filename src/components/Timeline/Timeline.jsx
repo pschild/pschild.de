@@ -5,10 +5,6 @@ import "moment/locale/de";
 import styles from "./Timeline.module.scss";
 
 class Timeline extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     generateTimespanLabel(frontmatter) {
         let dateFrom = moment(frontmatter.dateFrom).format('MM[/]YYYY');
         let dateTo = moment(frontmatter.dateTo).format('MM[/]YYYY');

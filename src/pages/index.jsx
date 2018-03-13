@@ -8,10 +8,7 @@ export default ({ data }) => (
         <HeaderImage imagePath={data.site.siteMetadata.homeHeaderImagePath}>
             <h1>Über mich</h1>
         </HeaderImage>
-        <h2>Hi!</h2>
-
-        <h3>Ich bin ...</h3>
-        <AboutMe/>
+        <AboutMe contactData={data.site.siteMetadata}/>
 
         <h3>Lebenslauf</h3>
         <Timeline items={data.allMarkdownRemark.edges}/>
@@ -23,6 +20,10 @@ export const query = graphql`
     site {
       siteMetadata {
         homeHeaderImagePath
+        mail
+        xingProfile
+        linkedinProfile
+        githubProfile
       }
     }
     allMarkdownRemark(

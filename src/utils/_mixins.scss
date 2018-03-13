@@ -4,6 +4,13 @@
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.12);
 }
 
+@mixin card {
+  background: $secondary-color;
+  @include box-shadow;
+  padding: 36px 48px;
+  margin-bottom: 24px;
+}
+
 @mixin text-shadow {
   text-shadow: 1px 1px 10px rgba(70,70,70,1);
 }
