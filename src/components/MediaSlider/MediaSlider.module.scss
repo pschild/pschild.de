@@ -4,115 +4,126 @@
 .sliderElements,
 .sliderElements figure,
 .sliderControls {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .cssSlider {
-    overflow-x: hidden;
-    width: 500px;
-    max-width: 100%;
-    margin: 0 auto;
-    position: relative;
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
 
-    .navArea {
-        position: absolute;
-        height: 100%;
-        width: 40px;
-        z-index: 1;
-        cursor: pointer;
+  .navArea {
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    z-index: 1;
+    cursor: pointer;
 
-        &.disabled {
-            display: none;
-        }
-
-        span {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        &.left {
-            span {
-                left: 0;
-            }
-        }
-
-        &.right {
-            right: 0;
-
-            span {
-                right: 0;
-            }
-        }
+    &.disabled {
+      display: none;
     }
+
+    span {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all .1s ease-in-out;
+    }
+
+    &.left {
+      left: -40px;
+      span {
+        left: 0;
+      }
+    }
+
+    &.right {
+      right: -40px;
+
+      span {
+        right: 0;
+      }
+    }
+
+    &:hover {
+      &.left span, &.right span {
+        transform: translateY(-50%) scale(1.2);
+      }
+    }
+  }
+
+  .stageContainer {
+    overflow-x: hidden;
+  }
 }
 
 .sliderElements {
-    list-style: none;
+  list-style: none;
+  position: relative;
+  left: 0;
+  margin-bottom: 15px;
+  transition: left .5s ease-in-out;
+
+  img, video {
+    max-height: 400px;
+  }
+
+  &:after {
+    content: ".";
+    display: block;
+    height: .1px;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    overflow: hidden;
+  }
+
+  & > li {
+    float: left;
     position: relative;
+    text-align: center;
+  }
+
+  .caption {
+    display: block;
+    color: $secondary-color;
+    position: absolute;
     left: 0;
-    margin-bottom: 15px;
-    transition: left .5s ease-in-out;
-
-    img, video {
-        max-height: 400px;
-    }
-
-    &:after {
-        content: ".";
-        display: block;
-        height: .1px;
-        clear: both;
-        visibility: hidden;
-        font-size: 0;
-        overflow: hidden;
-    }
-
-    & > li {
-        float: left;
-        position: relative;
-        text-align: center;
-    }
-
-    .caption {
-        display: block;
-        color: $secondary-color;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        padding: 5px;
-        background: rgba(0, 0, 0, .5);
-    }
+    bottom: 0;
+    padding: 5px;
+    background: rgba(0, 0, 0, .5);
+  }
 }
 
 .cssSlider input {
-    position: absolute;
-    left: -99999px;
+  position: absolute;
+  left: -99999px;
 }
 
 .sliderControls {
-    text-align: center;
+  text-align: center;
 
-    li {
-        display: inline-block;
-        margin: 0 5px;
+  li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  label {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    background: #ccc;
+
+    &:hover, &.active {
+      background: #aaa;
     }
 
-    label {
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        display: block;
-        cursor: pointer;
-        background: #ccc;
-
-        &:hover, &.active {
-            background: #aaa;
-        }
-
-        &.active {
-            cursor: default;
-        }
+    &.active {
+      cursor: default;
     }
+  }
 }

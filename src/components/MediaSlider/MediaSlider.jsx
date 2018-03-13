@@ -76,7 +76,7 @@ class MediaSlider extends Component {
                             return <input key={i} type="radio" name="slider" id={this.generateSlideId(i)} value={i} onChange={this.handleActiveSliderIndexChanged} checked={this.state.activeSlideIndex == i}></input>
                         })
                 }
-                <ReactSwipeEvents onSwipedLeft={this.showNextSlide} onSwipedRight={this.showPreviousSlide}>
+                <ReactSwipeEvents onSwipedLeft={this.showNextSlide} onSwipedRight={this.showPreviousSlide} className={styles.stageContainer}>
                     <ul className={styles.sliderElements} style={{ width: this.calcSliderWidth(), left: -(this.state.activeSlideIndex * 100) + '%' }}>
                         {
                             this.state.mediaItems
