@@ -2,6 +2,7 @@
 title: VisDat
 layout: project
 date: "2018-02-27"
+titleImagePath: "./visdat_3.jpg"
 ---
 * Abschluss-Projekt der Lehrveranstaltung "Interdisziplinäres Projekt" an der Hochschule Rhein-Waal
 * Erstellung eines interaktiven Dashboards mit AngularJS und D3.js

@@ -2,6 +2,7 @@
 title: MyPlant
 layout: project
 date: "2018-02-22"
+titleImagePath: "./myplant_1.jpg"
 ---
 * Abschluss-Projekt der Lehrveranstaltung "Projektmanagement" an der Hochschule Rhein-Waal
 * Programmierung von Arduino, Web-App und einer Schnittstelle

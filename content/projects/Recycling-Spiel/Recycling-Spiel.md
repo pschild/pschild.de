@@ -2,6 +2,7 @@
 title: Recycling-Spiel
 layout: project
 date: "2018-02-27"
+titleImagePath: "./recycling_1.jpg"
 ---
 * Abschluss-Projekt der Lehrveranstaltung "Fortgeschrittene Interaktionstechnologien" an der Hochschule Rhein-Waal
 * Spielerisches Lernen von richtiger Mülltrennung

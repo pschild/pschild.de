@@ -2,6 +2,7 @@
 title: MyGarden
 layout: project
 date: "2018-02-27"
+titleImagePath: "./mygarden_1.jpg"
 ---
 * Abschluss-Projekt der Lehrveranstaltung "Spieleentwicklung" an der Hochschule Rhein-Waal
 * Umsetzung mit Unity3d und C#

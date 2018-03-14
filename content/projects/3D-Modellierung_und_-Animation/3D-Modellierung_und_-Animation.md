@@ -2,6 +2,7 @@
 title: 3D-Modellierung und -Animation
 layout: project
 date: "2018-02-27"
+titleImagePath: "./lego.jpg"
 ---
 * Abschluss-Projekt der Lehrveranstaltung "3D-Modellierung und -Animation" an der Hochschule Rhein-Waal
 * Modellierung und Animation von LEGO-Steinen in Autodesk 3ds Max

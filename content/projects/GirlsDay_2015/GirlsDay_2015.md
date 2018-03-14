@@ -2,6 +2,7 @@
 title: GirlsDay 2015
 layout: project
 date: "2018-02-27"
+titleImagePath: "./girlsday_1.jpg"
 ---
 * Studentisches Projekt an der Hochschule Rhein-Waal
 * Programmierung eines Arduinos mit Servo-Motor, LEDs und Twitter-Anbindung

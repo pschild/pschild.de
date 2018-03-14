@@ -2,6 +2,7 @@
 title: AugIR
 layout: project
 date: "2018-02-27"
+titleImagePath: "./augir_4.png"
 ---
 * Abschluss-Projekt der Lehrveranstaltung "Webentwicklung" an der Hochschule Rhein-Waal
 * Umsetzung mit AngularJS

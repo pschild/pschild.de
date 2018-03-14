@@ -2,6 +2,7 @@
 title: Datenvisualisierung
 layout: project
 date: "2018-02-27"
+titleImagePath: "./destatis_3.png"
 ---
 * Abschluss-Projekt der Lehrveranstaltung "Software Engineering" an der Hochschule Rhein-Waal
 * Umsetzung mit jQuery und D3.js

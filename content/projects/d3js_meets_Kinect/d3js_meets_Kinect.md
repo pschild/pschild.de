@@ -2,6 +2,7 @@
 title: D3.js meets Kinect
 layout: project
 date: "2018-02-27"
+titleImagePath: "./d3kinect_4.png"
 ---
 * Abschluss-Projekt der Lehrveranstaltung "Multimediale Technologien" an der Hochschule Rhein-Waal
 * Frontend: AngularJS und D3.js

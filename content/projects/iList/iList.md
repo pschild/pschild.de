@@ -2,6 +2,7 @@
 title: iList
 layout: project
 date: "2018-02-27"
+titleImagePath: "./ilist_8.png"
 ---
 * Abschluss-Projekt der Lehrveranstaltung "Mobile Development" an der Hochschule Rhein-Waal
 * Umsetzung einer Android-App zum Verwalten von digitalen Einkaufszetteln
