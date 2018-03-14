@@ -51,6 +51,7 @@ class Lightbox extends Component {
         return (
             <div className={classNames.join(' ')}>
                 <img src={this.state.mediaItem.props.src}/>
+                <div className={styles.mask} onClick={this.close}></div>
                 <div className={styles.closeButton} onClick={this.close}>
                     <MdClose size={50} />
                 </div>
