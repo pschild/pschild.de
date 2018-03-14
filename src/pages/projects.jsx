@@ -32,6 +32,9 @@ export const query = graphql`
           frontmatter {
             title
             date
+            titleImagePath {
+              publicURL
+            }
           }
           fields {
             slug
