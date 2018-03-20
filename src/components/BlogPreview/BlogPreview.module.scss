@@ -2,5 +2,6 @@
 @import "../../utils/mixins";
 
 .blogPreviewContainer {
-    @include card;
+  @include card;
+  @include card-margin;
 }

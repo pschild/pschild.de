@@ -7,6 +7,9 @@
 @mixin card {
   background: $secondary-color;
   @include box-shadow;
+}
+
+@mixin card-margin {
   padding: 36px 48px;
   margin-bottom: 24px;
 }

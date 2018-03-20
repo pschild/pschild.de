@@ -4,20 +4,24 @@ import styles from "./ProjectPreview.module.scss";
 import moment from "moment/moment";
 
 class BlogPreview extends Component {
-    getTitleImage() {
+    getTitleImageStyle() {
         if (this.props.projectNode.frontmatter.titleImagePath) {
-            return <div className={styles.titleImageContainer} style={{backgroundImage: `url(${this.props.projectNode.frontmatter.titleImagePath.publicURL})`}}/>;
+            return {
+                backgroundImage: `url(${this.props.projectNode.frontmatter.titleImagePath.publicURL})`
+            };
         }
     }
 
     render() {
         return (
             <article className={styles.projectPreviewContainer}>
-                {this.getTitleImage()}
                 <Link to={`projects${this.props.projectNode.fields.slug}`}>
-                    <h3>{this.props.projectNode.frontmatter.title}</h3>
+                    <div className={styles.titleImageContainer} style={this.getTitleImageStyle()}></div>
+                    <div className={styles.detailsContainer}>
+                        <h3 className={styles.title}>{this.props.projectNode.frontmatter.title}</h3>
+                        <h6>{moment(this.props.projectNode.frontmatter.date).format('LL')}</h6>
+                    </div>
                 </Link>
-                <p>{moment(this.props.projectNode.frontmatter.date).format('LL')}</p>
             </article>
         );
     }
