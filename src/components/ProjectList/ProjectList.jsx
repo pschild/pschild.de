@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import styles from "./ProjectList.module.scss";
 import ProjectPreview from "../ProjectPreview/ProjectPreview";
+import InputField from "../InputField/InputField";
 
-class Navigation extends Component {
+class ProjectList extends Component {
     constructor(props) {
         super(props);
 
@@ -28,7 +29,7 @@ class Navigation extends Component {
             <div>
                 <div className={styles.headBar}>
                     <h4 className={styles.amountLabel}>{this.state.displayedProjectList.length} Projekte</h4>
-                    <input className={styles.searchField} type="text" onKeyUp={this.handleKeyUp} placeholder="nach Titel suchen" />
+                    <InputField placeholder="Titel, Tags, ..." onKeyUp={this.handleKeyUp}/>
                 </div>
                 <div className={styles.projectListContainer}>
                     {this.state.displayedProjectList.map(({ node }) => (
@@ -40,4 +41,4 @@ class Navigation extends Component {
     }
 }
 
-export default Navigation;
+export default ProjectList;
