@@ -1,7 +1,7 @@
 ---
 title: St. Antonius-Hau
 layout: project
-date: "2018-02-27"
+date: "2015-08-31"
 ---
 * Einrichtung Wordpress
 * Webdesign (eigene Wordpress-Templates)

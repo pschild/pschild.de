@@ -1,10 +1,15 @@
 ---
 title: AugIR
 layout: project
-date: "2018-02-27"
+date: "2016-01-25"
 titleImagePath: "./augir_4.png"
 ---
 * Abschluss-Projekt der Lehrveranstaltung "Webentwicklung" an der Hochschule Rhein-Waal
+* Zusammenarbeit mit Interaction Room GmbH
+* Web-App für Notebook und mobile Geräte
+* Kompatibilität für: (Edge || IE) && Chrome
+* Karteikarten auf Touch-Device erstellen
+* Karten sollen an eine bestehende Serveranwendung gesendet werden
 * Umsetzung mit AngularJS
 * Zeichnen von Storycards per Toucheingabe
 * Senden der Storycards an ein Smartboard per WebSocket

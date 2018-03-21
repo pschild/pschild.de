@@ -1,7 +1,7 @@
 ---
 title: Anjens Unplugged
 layout: project
-date: "2018-02-27"
+date: "2013-12-16"
 ---
 * Einrichtung Joomla
 * Webdesign (eigene Joomla-Templates)

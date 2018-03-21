@@ -1,7 +1,7 @@
 ---
 title: Datenvisualisierung
 layout: project
-date: "2018-02-27"
+date: "2015-07-17"
 titleImagePath: "./destatis_3.png"
 ---
 * Abschluss-Projekt der Lehrveranstaltung "Software Engineering" an der Hochschule Rhein-Waal

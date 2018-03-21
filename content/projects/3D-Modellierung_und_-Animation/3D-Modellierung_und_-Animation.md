@@ -1,7 +1,7 @@
 ---
 title: 3D-Modellierung und -Animation
 layout: project
-date: "2018-02-27"
+date: "2015-09-15"
 titleImagePath: "./lego.jpg"
 ---
 * Abschluss-Projekt der Lehrveranstaltung "3D-Modellierung und -Animation" an der Hochschule Rhein-Waal

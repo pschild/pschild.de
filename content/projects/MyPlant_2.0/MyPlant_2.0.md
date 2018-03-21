@@ -1,7 +1,7 @@
 ---
 title: MyPlant 2.0
 layout: project
-date: "2018-02-27"
+date: "2015-06-25"
 titleImagePath: "./myplant20.jpg"
 ---
 * Abschluss-Projekt der Lehrveranstaltung "Projekt" an der Hochschule Rhein-Waal
