@@ -8,7 +8,6 @@ export default ({data}) => {
             <HeaderImage imagePath={data.site.siteMetadata.projectsHeaderImagePath}>
                 <h1>Projekte</h1>
             </HeaderImage>
-            <h4>{data.allMarkdownRemark.totalCount} Projekte</h4>
             <ProjectList projectList={data.allMarkdownRemark.edges}/>
         </div>
     )
@@ -25,7 +24,6 @@ export const query = graphql`
       filter: { frontmatter: { layout: { eq: "project" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ){
-      totalCount
       edges {
         node {
           id
