@@ -3,8 +3,9 @@
 .contentContainer {
   margin: $header-image-height auto 0 auto;
   max-width: $content-max-width;
+  min-height: calc(100vh - #{$header-image-height} - #{$footer-height});
   padding: 1rem;
-  background-color: #fbfbfb;
+  background-color: $background-color;
 }
 
 /* GLOBAL STYLES */
