@@ -22,7 +22,7 @@ export default ({ data }) => {
     const project = data.markdownRemark;
     return (
         <div>
-            <HeaderImage imagePath={`${location.origin}/${data.site.siteMetadata.projectsHeaderImagePath}`}/>
+            <HeaderImage imagePath={`${typeof window !== 'undefined' && window.location.origin}/${data.site.siteMetadata.projectsHeaderImagePath}`}/>
             <h1>{project.frontmatter.title}</h1>
             <h4>{moment(project.frontmatter.date).format('LL')}</h4>
             {

@@ -23,7 +23,7 @@ export default ({ data }) => {
     const post = data.markdownRemark;
     return (
         <div>
-            <HeaderImage imagePath={`${location.origin}/${data.site.siteMetadata.blogHeaderImagePath}`}/>
+            <HeaderImage imagePath={`${typeof window !== 'undefined' && window.location.origin}/${data.site.siteMetadata.blogHeaderImagePath}`}/>
             <h1>{post.frontmatter.title}</h1>
             {
                 renderAst(post.htmlAst)
