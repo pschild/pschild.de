@@ -19,6 +19,7 @@
     "gatsby-source-filesystem": "^1.5.23",
     "gatsby-transformer-remark": "^1.7.33",
     "moment": "^2.20.1",
+    "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
     "react-swipe-events": "^1.0.2",
     "react-waypoint": "^8.0.1",

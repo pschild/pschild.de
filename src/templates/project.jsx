@@ -8,6 +8,7 @@ import moment from "moment";
 import "moment/locale/de";
 import ImageWithLightbox from "../components/ImageWithLightbox/ImageWithLightbox";
 import HeaderImage from "../components/HeaderImage/HeaderImage";
+import SEO from "../components/SEO/SEO";
 
 const renderAst = new rehypeReact({
     createElement: React.createElement,
@@ -20,8 +21,10 @@ const renderAst = new rehypeReact({
 
 export default ({ data }) => {
     const project = data.markdownRemark;
+    const slug = project.fields.slug;
     return (
         <div>
+            <SEO postPath={slug} postNode={project} postSEO />
             <HeaderImage imagePath={`${typeof window !== 'undefined' && window.location.origin}/${data.site.siteMetadata.projectsHeaderImagePath}`}/>
             <h1>{project.frontmatter.title}</h1>
             <h4>{moment(project.frontmatter.date).format('LL')}</h4>
@@ -41,10 +44,17 @@ export const query = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       htmlAst
+      fields {
+        slug
+      }
       frontmatter {
         title
         date
+        titleImagePath {
+          publicURL
+        }
       }
+      excerpt
     }
   }
 `;
