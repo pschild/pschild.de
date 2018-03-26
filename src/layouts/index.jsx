@@ -41,23 +41,10 @@ class IndexLayout extends Component {
                 <div className={styles.contentContainer}>
                     {this.props.children()}
                 </div>
-                <Footer contactData={this.props.data.site.siteMetadata}/>
+                <Footer />
             </div>
         );
     }
 };
 
 export default IndexLayout;
-
-export const query = graphql`
-  query FooterQuery {
-    site {
-      siteMetadata {
-        mail
-        xingProfile
-        linkedinProfile
-        githubProfile
-      }
-    }
-  }
-`;

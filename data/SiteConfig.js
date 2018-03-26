@@ -6,26 +6,25 @@ module.exports = {
     pathPrefix: "/",
     siteTitleAlt: "pschild.de",
 
+    headers: {
+        home: './home.jpg',
+        projects: './projects.jpg',
+        blog: './blog.jpg',
+        imprint: './imprint.jpg'
+    },
+
+    contact: {
+        mobile: '0176 328 171 08',
+        mail: 'philippe@pschild.de',
+        xing: 'https://www.xing.com/profile/Philippe_Schild',
+        linkedin: 'https://de.linkedin.com/pub/philippe-schild/108/393/754',
+        github: 'https://github.com/pschild'
+    },
+
     // siteFBAppID: "xxxxxx",
     sitePaginationLimit: 10,
     googleAnalyticsID: "UA-xxxxxxx-x",
-    userLinks: [
-        {
-            label: "GitHub",
-            url: "https://github.com/xxxx",
-            iconClassName: "fa fa-github"
-        },
-        {
-            label: "Twitter",
-            url: "https://twitter.com/xxxx",
-            iconClassName: "fa fa-twitter"
-        },
-        {
-            label: "Email",
-            url: "mailto:xxxx@example.com",
-            iconClassName: "fa fa-envelope"
-        }
-    ],
+
     themeColor: "#ff0000",
     backgroundColor: "#e0e0e0"
 };

@@ -9,6 +9,7 @@ import Link from "gatsby-link";
 import kebabCase from "lodash/kebabCase";
 import ImageWithLightbox from "../components/ImageWithLightbox/ImageWithLightbox";
 import HeaderImage from "../components/HeaderImage/HeaderImage";
+import config from "../../data/SiteConfig";
 
 const renderAst = new rehypeReact({
     createElement: React.createElement,
@@ -23,7 +24,7 @@ export default ({ data }) => {
     const post = data.markdownRemark;
     return (
         <div>
-            <HeaderImage imagePath={`${typeof window !== 'undefined' && window.location.origin}/${data.site.siteMetadata.blogHeaderImagePath}`}/>
+            <HeaderImage imagePath={`${typeof window !== 'undefined' && window.location.origin}/${config.headers.blog}`}/>
             <h1>{post.frontmatter.title}</h1>
             {
                 renderAst(post.htmlAst)
@@ -52,11 +53,6 @@ export default ({ data }) => {
 
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
-    site {
-      siteMetadata {
-        blogHeaderImagePath
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       htmlAst
       frontmatter {

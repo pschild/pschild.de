@@ -1,11 +1,12 @@
 import React from "react";
 import BlogPreview from "../components/BlogPreview/BlogPreview";
 import HeaderImage from "../components/HeaderImage/HeaderImage";
+import config from "../../data/SiteConfig";
 
 export default ({data}) => {
     return (
         <div>
-            <HeaderImage imagePath={data.site.siteMetadata.blogHeaderImagePath}>
+            <HeaderImage imagePath={config.headers.blog}>
                 <h1>Blog</h1>
             </HeaderImage>
             <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
@@ -18,11 +19,6 @@ export default ({data}) => {
 
 export const query = graphql`
   query IndexQuery {
-    site {
-      siteMetadata {
-        blogHeaderImagePath
-      }
-    }
     allMarkdownRemark(
       filter: { frontmatter: { layout: { eq: "post" } } }
     ){

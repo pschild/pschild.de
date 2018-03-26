@@ -17,7 +17,7 @@ class AboutMe extends Component {
                     <li className={styles.fact}>💻 Programmierer</li>
                 </ul>
                 <h3>Kontakt</h3>
-                <ContactIcons contactData={this.props.contactData}/>
+                <ContactIcons />
             </div>
         );
     }

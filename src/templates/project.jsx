@@ -9,6 +9,7 @@ import "moment/locale/de";
 import ImageWithLightbox from "../components/ImageWithLightbox/ImageWithLightbox";
 import HeaderImage from "../components/HeaderImage/HeaderImage";
 import SEO from "../components/SEO/SEO";
+import config from "../../data/SiteConfig";
 
 const renderAst = new rehypeReact({
     createElement: React.createElement,
@@ -25,7 +26,7 @@ export default ({ data }) => {
     return (
         <div>
             <SEO postPath={slug} postNode={project} postSEO />
-            <HeaderImage imagePath={`${typeof window !== 'undefined' && window.location.origin}/${data.site.siteMetadata.projectsHeaderImagePath}`}/>
+            <HeaderImage imagePath={`${typeof window !== 'undefined' && window.location.origin}/${config.headers.projects}`}/>
             <h1>{project.frontmatter.title}</h1>
             <h4>{moment(project.frontmatter.date).format('LL')}</h4>
             {
@@ -37,11 +38,6 @@ export default ({ data }) => {
 
 export const query = graphql`
   query ProjectQuery($slug: String!) {
-    site {
-      siteMetadata {
-        projectsHeaderImagePath
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       htmlAst
       fields {
