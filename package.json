@@ -10,6 +10,7 @@
   "dependencies": {
     "gatsby": "^1.9.243",
     "gatsby-link": "^1.6.40",
+    "gatsby-plugin-google-analytics": "^1.0.25",
     "gatsby-plugin-sass": "^1.0.25",
     "gatsby-plugin-typography": "^1.7.18",
     "gatsby-remark-copy-linked-files": "^1.5.30",

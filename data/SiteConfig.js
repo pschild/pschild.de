@@ -23,7 +23,7 @@ module.exports = {
 
     // siteFBAppID: "xxxxxx",
     sitePaginationLimit: 10,
-    googleAnalyticsID: "UA-xxxxxxx-x",
+    googleAnalyticsID: "UA-33544506-4",
 
     themeColor: "#ff0000",
     backgroundColor: "#e0e0e0"

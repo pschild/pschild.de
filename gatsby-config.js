@@ -1,3 +1,5 @@
+const config = require('./data/SiteConfig');
+
 module.exports = {
     plugins: [
         `gatsby-plugin-sass`,
@@ -28,10 +30,19 @@ module.exports = {
                     {
                         resolve: `gatsby-remark-prismjs`,
                         options: {
-                            classPrefix: "language-",
+                            classPrefix: 'language-',
                         }
                     }
                 ]
+            }
+        },
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: config.googleAnalyticsID,
+                head: true,
+                anonymize: true,
+                respectDNT: true
             }
         }
     ]
