@@ -2,6 +2,8 @@
 @import "../../utils/mixins";
 
 .imageWithLightbox {
+  margin: 50px 0;
+
   .imageContainer {
     max-width: 500px;
     margin: 0 auto;
