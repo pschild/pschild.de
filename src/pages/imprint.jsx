@@ -1,9 +1,13 @@
 import React from "react";
 import HeaderImage from "../components/HeaderImage/HeaderImage";
 import config from "../../data/SiteConfig";
+import {Helmet} from "react-helmet";
 
 export default () => (
     <div>
+        <Helmet>
+            <title>{`Impressum`}</title>
+        </Helmet>
         <HeaderImage imagePath={config.headers.imprint}>
             <h1>Impressum</h1>
         </HeaderImage>

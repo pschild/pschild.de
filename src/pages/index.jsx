@@ -3,9 +3,13 @@ import AboutMe from "../components/AboutMe/AboutMe";
 import Timeline from "../components/Timeline/Timeline";
 import HeaderImage from "../components/HeaderImage/HeaderImage";
 import config from "../../data/SiteConfig";
+import {Helmet} from "react-helmet";
 
 export default ({data}) => (
     <div>
+        <Helmet>
+            <title>{`Über mich`}</title>
+        </Helmet>
         <HeaderImage imagePath={config.headers.home}>
             <h1>Hi!</h1>
         </HeaderImage>

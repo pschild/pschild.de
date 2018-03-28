@@ -2,10 +2,14 @@ import React from "react";
 import BlogPreview from "../components/BlogPreview/BlogPreview";
 import HeaderImage from "../components/HeaderImage/HeaderImage";
 import config from "../../data/SiteConfig";
+import {Helmet} from "react-helmet";
 
 export default ({data}) => {
     return (
         <div>
+            <Helmet>
+                <title>{`Blog`}</title>
+            </Helmet>
             <HeaderImage imagePath={config.headers.blog}>
                 <h1>Blog</h1>
             </HeaderImage>

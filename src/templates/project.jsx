@@ -10,6 +10,7 @@ import ImageWithLightbox from "../components/ImageWithLightbox/ImageWithLightbox
 import HeaderImage from "../components/HeaderImage/HeaderImage";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
+import {Helmet} from "react-helmet";
 
 const renderAst = new rehypeReact({
     createElement: React.createElement,
@@ -25,6 +26,9 @@ export default ({ data }) => {
     const slug = project.fields.slug;
     return (
         <div>
+            <Helmet>
+                <title>{`Projekte | ${project.frontmatter.title}`}</title>
+            </Helmet>
             <SEO postPath={slug} postNode={project} postSEO />
             <HeaderImage imagePath={`${typeof window !== 'undefined' && window.location.origin}/${config.headers.projects}`}/>
             <h1>{project.frontmatter.title}</h1>

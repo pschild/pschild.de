@@ -10,6 +10,8 @@ import kebabCase from "lodash/kebabCase";
 import ImageWithLightbox from "../components/ImageWithLightbox/ImageWithLightbox";
 import HeaderImage from "../components/HeaderImage/HeaderImage";
 import config from "../../data/SiteConfig";
+import {Helmet} from "react-helmet";
+import SEO from "../components/SEO/SEO";
 
 const renderAst = new rehypeReact({
     createElement: React.createElement,
@@ -22,8 +24,13 @@ const renderAst = new rehypeReact({
 
 export default ({ data }) => {
     const post = data.markdownRemark;
+    const slug = post.fields.slug;
     return (
         <div>
+            <Helmet>
+                <title>{`Blog | ${post.frontmatter.title}`}</title>
+            </Helmet>
+            <SEO postPath={slug} postNode={post} postSEO />
             <HeaderImage imagePath={`${typeof window !== 'undefined' && window.location.origin}/${config.headers.blog}`}/>
             <h1>{post.frontmatter.title}</h1>
             {
@@ -55,11 +62,15 @@ export const query = graphql`
   query BlogPostQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       htmlAst
+      fields {
+        slug
+      }
       frontmatter {
         title
         category
         tags
       }
+      excerpt
     }
   }
 `;

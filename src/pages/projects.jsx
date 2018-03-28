@@ -1,7 +1,7 @@
 import React from "react";
 import HeaderImage from "../components/HeaderImage/HeaderImage";
 import ProjectList from "../components/ProjectList/ProjectList";
-import Helmet from "react-helmet";
+import {Helmet} from "react-helmet";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 
