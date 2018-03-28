@@ -12,9 +12,11 @@
   width: 500px;
   max-width: 100%;
   margin: 0 auto;
-  position: relative;
 
   .navArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     height: 100%;
     width: 40px;
@@ -26,21 +28,19 @@
     }
 
     span {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
       transition: all .1s ease-in-out;
     }
 
     &.left {
-      left: -40px;
+      left: 0;
+
       span {
         left: 0;
       }
     }
 
     &.right {
-      right: -40px;
+      right: 0;
 
       span {
         right: 0;
@@ -48,27 +48,33 @@
     }
 
     &:hover {
+      &.left {
+        background: linear-gradient(to right, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
+      }
+
+      &.right {
+        background: linear-gradient(to left, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
+      }
+
       &.left span, &.right span {
-        transform: translateY(-50%) scale(1.2);
+        transform: scale(1.2);
       }
     }
   }
 
   .stageContainer {
     overflow-x: hidden;
+    position: relative;
   }
 }
 
-.sliderElements {
+ul.sliderElements {
+  display: flex;
+  align-items: center;
   list-style: none;
   position: relative;
   left: 0;
-  margin-bottom: 15px;
   transition: left .5s ease-in-out;
-
-  img, video {
-    max-height: 400px;
-  }
 
   &:after {
     content: ".";
@@ -82,8 +88,8 @@
 
   & > li {
     float: left;
-    position: relative;
     text-align: center;
+    margin-bottom: 0;
   }
 
   .caption {

@@ -64,12 +64,6 @@ class MediaSlider extends Component {
     render() {
         return (
             <div className={styles.cssSlider}>
-                <div className={[styles.navArea, styles.left, this.getLeftDisabledClassName()].join(' ')} onClick={this.showPreviousSlide}>
-                    <span><FaChevronLeft/></span>
-                </div>
-                <div className={[styles.navArea, styles.right, this.getRightDisabledClassName()].join(' ')} onClick={this.showNextSlide}>
-                    <span><FaChevronRight/></span>
-                </div>
                 {
                     this.state.mediaItems
                         .map((item, i) => {
@@ -77,6 +71,12 @@ class MediaSlider extends Component {
                         })
                 }
                 <ReactSwipeEvents onSwipedLeft={this.showNextSlide} onSwipedRight={this.showPreviousSlide} className={styles.stageContainer}>
+                    <div className={[styles.navArea, styles.left, this.getLeftDisabledClassName()].join(' ')} onClick={this.showPreviousSlide}>
+                        <span><FaChevronLeft/></span>
+                    </div>
+                    <div className={[styles.navArea, styles.right, this.getRightDisabledClassName()].join(' ')} onClick={this.showNextSlide}>
+                        <span><FaChevronRight/></span>
+                    </div>
                     <ul className={styles.sliderElements} style={{ width: this.calcSliderWidth(), left: -(this.state.activeSlideIndex * 100) + '%' }}>
                         {
                             this.state.mediaItems
