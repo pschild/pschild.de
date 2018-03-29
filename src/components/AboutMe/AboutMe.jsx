@@ -13,8 +13,9 @@ class AboutMe extends Component {
                     <li className={styles.fact}>🎈 <Age/> Jahre</li>
                     <li className={styles.fact}>🏡 Goch, NRW</li>
                     <li className={styles.fact}>👨🏻‍🎓 Student</li>
-                    <li className={styles.fact}>💡 Bastler</li>
-                    <li className={styles.fact}>💻 Programmierer</li>
+                    <li className={styles.fact}>💻 Softwareentwickler</li>
+                    <li className={styles.fact}>❤️JavaScript-Fan</li>
+                    <li className={styles.fact}>💡 IoT-En­thu­si­ast</li>
                 </ul>
                 <h3>Kontakt</h3>
                 <ContactIcons />
