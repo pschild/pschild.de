@@ -11,8 +11,9 @@
     .gridItemWrapper {
       position: relative;
       overflow: hidden;
-      flex: 0 0 calc(16.6666% - 5px);
-      margin: 2.5px;
+      flex: 0 0 calc(16.6666% - #{$image-gallery-grid-margin});
+      margin: $image-gallery-grid-margin / 2;
+      border: 1px #ccc solid;
 
       /* for squared images */
       &:before {
@@ -55,25 +56,25 @@
 
   @include breakpoint-xl-or-less {
     .grid .gridItemWrapper {
-      flex: 0 0 calc(20% - 5px);
+      flex: 0 0 calc(20% - #{$image-gallery-grid-margin});
     }
   }
 
   @include breakpoint-lg-or-less {
     .grid .gridItemWrapper {
-      flex: 0 0 calc(33.3333% - 5px);
+      flex: 0 0 calc(33.3333% - #{$image-gallery-grid-margin});
     }
   }
 
   @include breakpoint-md-or-less {
     .grid .gridItemWrapper {
-      flex: 0 0 calc(50% - 5px);
+      flex: 0 0 calc(50% - #{$image-gallery-grid-margin});
     }
   }
 
   @include breakpoint-sm-or-less {
     .grid .gridItemWrapper {
-      flex: 0 0 calc(100% - 5px);
+      flex: 0 0 calc(100% - #{$image-gallery-grid-margin});
     }
   }
 }

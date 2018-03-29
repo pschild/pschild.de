@@ -8,7 +8,9 @@ Im Rahmen meiner Bachelorarbeit an der Hochschule Rhein-Waal habe ich eine proto
 
 Der Vergleich verschiedener Versionen von Softwareprojekten soll Tendenzen der **Software-Evolution** aufzeigen und sichtbar machen.
 
-<img src="./coderadar_6.jpg"/>
+<image-with-lightbox>
+    <img src="./coderadar_6.jpg"/>
+</image-with-lightbox>
 
 Ziel dieser Anwendung ist es daher, dass Entwickler und auch Projektmanager **Fehler und Möglichkeiten zur Verbesserung ihrer Projekte intuitiv erkunden und lokalisieren** können. Dafür werden **Ergebnisse von statischen Codeanalysen** in Form einer "Stadt" visualisiert: "Gebäude" der Stadt repräsentieren dabei die Dateien, "Bezirke" die Module des Projekts.
 
