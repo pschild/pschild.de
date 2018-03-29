@@ -70,29 +70,33 @@ class MediaSlider extends Component {
                             return <input key={i} type="radio" name="slider" id={this.generateSlideId(i)} value={i} onChange={this.handleActiveSliderIndexChanged} checked={this.state.activeSlideIndex == i}></input>
                         })
                 }
-                <ReactSwipeEvents onSwipedLeft={this.showNextSlide} onSwipedRight={this.showPreviousSlide} className={styles.stageContainer}>
+                <div className={styles.stageContainer}>
                     <div className={[styles.navArea, styles.left, this.getLeftDisabledClassName()].join(' ')} onClick={this.showPreviousSlide}>
-                        <span><FaChevronLeft/></span>
+                        <div>
+                            <span><FaChevronLeft/></span>
+                        </div>
                     </div>
                     <div className={[styles.navArea, styles.right, this.getRightDisabledClassName()].join(' ')} onClick={this.showNextSlide}>
                         <span><FaChevronRight/></span>
                     </div>
-                    <ul className={styles.sliderElements} style={{ width: this.calcSliderWidth(), left: -(this.state.activeSlideIndex * 100) + '%' }}>
-                        {
-                            this.state.mediaItems
-                                .map((item, i) => {
-                                    return (
-                                        <li key={i} style={{ width: this.calcItemWidth() }}>
-                                            <div>
-                                                {item}
-                                                <div className={styles.caption} style={{ display: item.props['data-caption'] ? 'block' : 'none' }}>{item.props['data-caption']}</div>
-                                            </div>
-                                        </li>
-                                    )
-                                })
-                        }
-                    </ul>
-                </ReactSwipeEvents>
+                    <ReactSwipeEvents onSwipedLeft={this.showNextSlide} onSwipedRight={this.showPreviousSlide}>
+                        <ul className={styles.sliderElements} style={{ width: this.calcSliderWidth(), left: -(this.state.activeSlideIndex * 100) + '%' }}>
+                            {
+                                this.state.mediaItems
+                                    .map((item, i) => {
+                                        return (
+                                            <li key={i} style={{ width: this.calcItemWidth() }}>
+                                                <div>
+                                                    {item}
+                                                    <div className={styles.caption} style={{ display: item.props['data-caption'] ? 'block' : 'none' }}>{item.props['data-caption']}</div>
+                                                </div>
+                                            </li>
+                                        )
+                                    })
+                            }
+                        </ul>
+                    </ReactSwipeEvents>
+                </div>
 
                 <ul className={styles.sliderControls}>
                     {

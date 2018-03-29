@@ -9,7 +9,7 @@
 }
 
 .cssSlider {
-  width: 500px;
+  //width: 500px;
   max-width: 100%;
   margin: 50px auto;
 
@@ -19,7 +19,7 @@
     justify-content: center;
     position: absolute;
     height: 100%;
-    width: 40px;
+    width: 50px;
     z-index: 1;
     cursor: pointer;
 
@@ -28,11 +28,23 @@
     }
 
     span {
+      background: rgba(170, 170, 170, .7);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       transition: all .1s ease-in-out;
+
+      svg {
+        transition: all .1s ease-in-out;
+      }
     }
 
     &.left {
-      left: 0;
+      left: 5px;
 
       span {
         left: 0;
@@ -40,7 +52,7 @@
     }
 
     &.right {
-      right: 0;
+      right: 5px;
 
       span {
         right: 0;
@@ -49,15 +61,19 @@
 
     &:hover {
       &.left {
-        background: linear-gradient(to right, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
+        //background: linear-gradient(to right, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
       }
 
       &.right {
-        background: linear-gradient(to left, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
+        //background: linear-gradient(to left, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
       }
 
       &.left span, &.right span {
-        transform: scale(1.2);
+        background: rgba(70, 70, 70, .7);
+        svg {
+          color: #fff;
+          transform: scale(1.2);
+        }
       }
     }
   }
