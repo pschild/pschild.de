@@ -3,6 +3,7 @@ import BlogPreview from "../components/BlogPreview/BlogPreview";
 import HeaderImage from "../components/HeaderImage/HeaderImage";
 import config from "../../data/SiteConfig";
 import {Helmet} from "react-helmet";
+import SEO from "../components/SEO/SEO";
 
 class BlogPage extends Component {
 
@@ -29,6 +30,7 @@ class BlogPage extends Component {
                 <Helmet>
                     <title>{`Blog`}</title>
                 </Helmet>
+                <SEO />
                 <HeaderImage imagePath={config.headers.blog}>
                     <h1>Blog</h1>
                 </HeaderImage>

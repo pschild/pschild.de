@@ -2,12 +2,14 @@ import React from "react";
 import HeaderImage from "../components/HeaderImage/HeaderImage";
 import config from "../../data/SiteConfig";
 import {Helmet} from "react-helmet";
+import SEO from "../components/SEO/SEO";
 
 export default () => (
     <div>
         <Helmet>
             <title>{`Impressum`}</title>
         </Helmet>
+        <SEO />
         <HeaderImage imagePath={config.headers.imprint}>
             <h1>Impressum</h1>
         </HeaderImage>

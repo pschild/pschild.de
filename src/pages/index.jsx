@@ -4,12 +4,14 @@ import Timeline from "../components/Timeline/Timeline";
 import HeaderImage from "../components/HeaderImage/HeaderImage";
 import config from "../../data/SiteConfig";
 import {Helmet} from "react-helmet";
+import SEO from "../components/SEO/SEO";
 
 export default ({data}) => (
     <div>
         <Helmet>
             <title>{`Über mich`}</title>
         </Helmet>
+        <SEO />
         <HeaderImage imagePath={config.headers.home}>
             <h1>Hi!</h1>
         </HeaderImage>
