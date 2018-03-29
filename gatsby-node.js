@@ -36,6 +36,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 node {
                   frontmatter {
                     layout
+                    draft
                   }
                   fields {
                     slug
@@ -48,7 +49,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         ).then(result => {
             // console.log(JSON.stringify(result, null, 4));
             result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-                if (node.frontmatter.layout === 'post') {
+                if (node.frontmatter.layout === 'post' && node.frontmatter.draft !== 'yes') {
                     createPage({
                         path: `blog${node.fields.slug}`,
                         component: path.resolve(`./src/templates/blog-post.jsx`),

@@ -6,6 +6,7 @@ category: "Cat2"
 tags:
   - "Tag1"
   - "Tag2"
+draft: yes
 ---
 ```javascript
 let test = function() {
