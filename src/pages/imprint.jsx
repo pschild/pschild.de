@@ -7,7 +7,7 @@ import SEO from "../components/SEO/SEO";
 export default () => (
     <div>
         <Helmet>
-            <title>{`Impressum`}</title>
+            <title>{`${config.siteTitle} | Impressum`}</title>
         </Helmet>
         <SEO />
         <HeaderImage imagePath={config.headers.imprint}>

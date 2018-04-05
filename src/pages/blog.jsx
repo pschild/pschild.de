@@ -28,7 +28,7 @@ class BlogPage extends Component {
         return (
             <div>
                 <Helmet>
-                    <title>{`Blog`}</title>
+                    <title>{`${config.siteTitle} | Blog`}</title>
                 </Helmet>
                 <SEO />
                 <HeaderImage imagePath={config.headers.blog}>

@@ -9,7 +9,7 @@ export default ({data}) => {
     return (
         <div>
             <Helmet>
-                <title>{`Projekte`}</title>
+                <title>{`${config.siteTitle} | Projekte`}</title>
             </Helmet>
             <SEO />
             <HeaderImage imagePath={config.headers.projects}>
