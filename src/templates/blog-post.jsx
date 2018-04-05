@@ -28,7 +28,7 @@ export default ({ data }) => {
     return (
         <div>
             <Helmet>
-                <title>{`Blog | ${post.frontmatter.title}`}</title>
+                <title>{`${config.siteTitle} | ${post.frontmatter.title}`}</title>
             </Helmet>
             <SEO postPath={slug} postNode={post} postSEO />
             <HeaderImage imagePath={`${typeof window !== 'undefined' && window.location.origin}/${config.headers.blog}`}/>
