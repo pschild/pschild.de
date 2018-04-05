@@ -25,7 +25,7 @@ Wird der Gegenstand richtig einsortiert, erhält der Spieler einen Punkt. Wird d
 Die Zeit ist auf 90 Sekunden begrenzt. Der Spieler, der nach Ablauf der Zeit die meisten Punkte hat, gewinnt das Spiel.
 
 <image-with-lightbox>
-    <img src="./recycling_3.jpg"/>
+    <img src="./recycling_3.png"/>
 </image-with-lightbox>
 
 ## Prototyp 2: Herumliegenden Müll einsortieren
@@ -36,5 +36,5 @@ Wird der Gegenstand richtig einsortiert, erhält der Spieler einen Punkt.
 Die Zeit ist auf 90 Sekunden begrenzt. Der Spieler, der nach Ablauf der Zeit die meisten Punkte hat, gewinnt das Spiel.
 
 <image-with-lightbox>
-    <img src="./recycling_1.jpg"/>
+    <img src="./recycling_1.png"/>
 </image-with-lightbox>
