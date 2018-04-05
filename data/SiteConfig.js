@@ -2,7 +2,7 @@ module.exports = {
     siteTitle: "pschild.de",
     siteLogo: "/logo.png",
     siteDescription: "pschild.de | Projekte und Blogging",
-    siteUrl: "https://pschild.de",
+    siteUrl: "https://www.pschild.de",
     pathPrefix: "/",
     siteTitleAlt: "pschild.de",
 

@@ -1,8 +1,13 @@
 const config = require('./data/SiteConfig');
 
 module.exports = {
+    siteMetadata: {
+        siteUrl: config.siteUrl,
+    },
     plugins: [
-        `gatsby-plugin-sass`,
+        {
+            resolve: `gatsby-plugin-sass`
+        },
         {
             resolve: `gatsby-plugin-typography`,
             options: {
@@ -44,6 +49,9 @@ module.exports = {
                 anonymize: true,
                 respectDNT: true
             }
+        },
+        {
+            resolve: `gatsby-plugin-sitemap`
         }
     ]
 };
