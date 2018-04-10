@@ -12,7 +12,7 @@ export default ({data}) => {
                 <title>{`${config.siteTitle} | Projekte`}</title>
             </Helmet>
             <SEO />
-            <HeaderImage imagePath={config.headers.projects}>
+            <HeaderImage imagePath={config.siteUrl + config.headers.projects}>
                 <h1>Projekte</h1>
             </HeaderImage>
             <ProjectList projectList={data.allMarkdownRemark.edges}/>

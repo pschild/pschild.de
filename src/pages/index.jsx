@@ -12,7 +12,7 @@ export default ({data}) => (
             <title>{`${config.siteTitle} | Über mich`}</title>
         </Helmet>
         <SEO />
-        <HeaderImage imagePath={config.headers.home}>
+        <HeaderImage imagePath={config.siteUrl + config.headers.home}>
             <h1>Hi!</h1>
         </HeaderImage>
         <AboutMe />

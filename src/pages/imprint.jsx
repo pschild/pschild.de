@@ -10,7 +10,7 @@ export default () => (
             <title>{`${config.siteTitle} | Impressum`}</title>
         </Helmet>
         <SEO />
-        <HeaderImage imagePath={config.headers.imprint}>
+        <HeaderImage imagePath={config.siteUrl + config.headers.imprint}>
             <h1>Impressum</h1>
         </HeaderImage>
         <h2>Angaben gemäß § 5 TMG:</h2>

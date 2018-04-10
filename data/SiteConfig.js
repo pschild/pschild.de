@@ -7,10 +7,10 @@ module.exports = {
     siteTitleAlt: "pschild.de",
 
     headers: {
-        home: './home.jpg',
-        projects: './projects.jpg',
-        blog: './blog.jpg',
-        imprint: './imprint.jpg'
+        home: '/home.jpg',
+        projects: '/projects.jpg',
+        blog: '/blog.jpg',
+        imprint: '/imprint.jpg'
     },
 
     contact: {

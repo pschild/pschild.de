@@ -31,7 +31,7 @@ class BlogPage extends Component {
                     <title>{`${config.siteTitle} | Blog`}</title>
                 </Helmet>
                 <SEO />
-                <HeaderImage imagePath={config.headers.blog}>
+                <HeaderImage imagePath={config.siteUrl + config.headers.blog}>
                     <h1>Blog</h1>
                 </HeaderImage>
                 {this.getPostList()}
