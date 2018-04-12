@@ -2,7 +2,6 @@
 title: pschild.de
 layout: project
 date: "2018-03-29"
+titleImagePath: "./pschild1.jpg"
 ---
-* Eigener Webauftritt
-* Umsetzung mit GatsbyJs und React
-* Optimierung für mobile Geräte (RWD)
+Diese Seite befindet sich derzeit im Aufbau :wink:
