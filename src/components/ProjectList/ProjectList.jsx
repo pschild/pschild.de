@@ -19,7 +19,8 @@ class ProjectList extends Component {
         this.setState({
             displayedProjectList: this.props.projectList.filter(project => {
                 let title = project.node.frontmatter.title.toLowerCase();
-                return title.search(searchString) >= 0;
+                let foundInTags = project.node.frontmatter.tags && project.node.frontmatter.tags.filter(tag => tag.toLowerCase().search(searchString) >= 0);
+                return title.search(searchString) >= 0 || foundInTags;
             })
         });
     }

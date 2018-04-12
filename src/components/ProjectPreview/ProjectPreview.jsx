@@ -12,6 +12,16 @@ class ProjectPreview extends Component {
         }
     }
 
+    renderTagList() {
+        return (
+            <div className={styles.tagListContainer}>
+                <ul className={styles.tagList}>
+                    {this.props.projectNode.frontmatter.tags.map((tag, i) => <li key={i}>#{tag}</li>)}
+                </ul>
+            </div>
+        );
+    }
+
     render() {
         return (
             <article className={styles.projectPreviewContainer}>
@@ -22,6 +32,7 @@ class ProjectPreview extends Component {
                         <h6>{moment(this.props.projectNode.frontmatter.date).format('LL')}</h6>
                     </div>
                 </Link>
+                {this.props.projectNode.frontmatter.tags && this.renderTagList()}
             </article>
         );
     }
