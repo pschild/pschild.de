@@ -3,6 +3,13 @@ title: CodeRadarVisualization
 layout: project
 date: "2017-02-24"
 titleImagePath: "./full_single.png"
+tags:
+  - Studium
+  - Bachelor
+  - Bachelorarbeit
+  - Visualisierung
+  - Three.js
+  - Demo
 ---
 Im Rahmen meiner Bachelorarbeit an der Hochschule Rhein-Waal habe ich eine prototypische Anwendung entwickelt, die die **Struktur und Qualität von Software** visualisieren kann. Das Projekt wurde mit Hilfe der Web-Technologien HTML, CSS und JavaScript umgesetzt. Für die dreidimensionale Visualisierung wurde die Bibliothek <a href="https://threejs.org/" target="_blank">Three.js</a> verwendet.
 

@@ -3,6 +3,11 @@ title: AugIR
 layout: project
 date: "2016-01-25"
 titleImagePath: "./augir_4.png"
+tags:
+  - Studium
+  - Bachelor
+  - Webentwicklung
+  - AngularJS
 ---
 Als Abschlussprojekt der Lehrveranstaltung "Webentwicklung" an der Hochschule Rhein-Waal wurde in Zusammenarbeit mit der <a href="https://www.interaction-room.de/" target="_blank">Interaction Room GmbH</a> und weiteren Kommilitonen das Projekt _AugIR_ entwickelt.
 

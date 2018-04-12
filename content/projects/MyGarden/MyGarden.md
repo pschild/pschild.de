@@ -3,6 +3,13 @@ title: MyGarden
 layout: project
 date: "2015-07-09"
 titleImagePath: "./mygarden_1.jpg"
+tags:
+  - Studium
+  - Bachelor
+  - Spieleentwicklung
+  - Unity3d
+  - KI
+  - Video
 ---
 "MyGarden" ist der Name des Abschluss-Projektes der Lehrveranstaltung "Spieleentwicklung" an der Hochschule Rhein-Waal.<br/>
 Umgesetzt wurde das Spiel zusammen mit mehreren Kommilitonen mit _Unity3d_ und der Programmiersprache _C#_.

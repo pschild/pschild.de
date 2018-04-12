@@ -3,6 +3,14 @@ title: VisDat
 layout: project
 date: "2016-02-05"
 titleImagePath: "./visdat_3.jpg"
+tags:
+  - Studium
+  - Bachelor
+  - Datenvisualisierung
+  - Dashboard
+  - destatis
+  - AngularJS
+  - D3.js
 ---
 In der Lehrveranstaltung "Interdisziplinäres Projekt" an der Hochschule Rhein-Waal war es unsere Aufgabe, in studiengangsübergreifenden Teams ein Projekt zum Thema Datenvisualisierung umzusetzen.
 

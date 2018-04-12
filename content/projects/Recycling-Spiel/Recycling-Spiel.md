@@ -3,6 +3,12 @@ title: Recycling-Spiel
 layout: project
 date: "2015-07-10"
 titleImagePath: "./recycling_1.png"
+tags:
+  - Studium
+  - Bachelor
+  - Kinect
+  - Spiel
+  - Lernen
 ---
 _"Spielerisches Lernen von richtiger Mülltrennung"_ war das Thema des Abschluss-Projektes der Lehrveranstaltung "Fortgeschrittene Interaktionstechnologien" an der Hochschule Rhein-Waal.
 

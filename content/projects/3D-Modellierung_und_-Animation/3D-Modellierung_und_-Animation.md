@@ -3,6 +3,12 @@ title: 3D-Modellierung und -Animation
 layout: project
 date: "2015-09-15"
 titleImagePath: "./lego.jpg"
+tags:
+  - Studium
+  - Bachelor
+  - 3D-Modellierung
+  - Animation
+  - Video
 ---
 Als Prüfungsleistung in der Lehrveranstaltung "3D-Modellierung und -Animation" an der Hochschule Rhein-Waal war die Erstellung einer Animation mit Hilfe der Software _3ds Max_ gefordert.
 

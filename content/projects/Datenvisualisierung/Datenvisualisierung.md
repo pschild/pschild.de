@@ -3,6 +3,12 @@ title: Datenvisualisierung
 layout: project
 date: "2015-07-17"
 titleImagePath: "./destatis_3.png"
+tags:
+  - Studium
+  - Bachelor
+  - Datenvisualisierung
+  - destatis
+  - D3.js
 ---
 Das Abschluss-Projekt der Lehrveranstaltung "Software Engineering" an der Hochschule Rhein-Waal fand in enger Zusammenarbeit mit dem Statistischen Bundesamt <a href="https://www.destatis.de/DE/Startseite.html" target="_blank">destatis</a> statt.
 

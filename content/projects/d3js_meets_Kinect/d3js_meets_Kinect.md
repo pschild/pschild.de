@@ -3,6 +3,11 @@ title: D3.js meets Kinect
 layout: project
 date: "2016-01-29"
 titleImagePath: "./d3kinect_4.png"
+tags:
+  - Studium
+  - Bachelor
+  - Kinect
+  - D3.js
 ---
 _"Es gibt einen Zusammenhang zwischen verübten Terroranschlägen und Flüchtlingsbewegungen."_ - diese These sollte im Rahmen dieses Projektes, das als Abschluss-Projekt der Lehrveranstaltung "Multimediale Technologien" an der Hochschule Rhein-Waal durchgeführt wurde, überprüft werden.
 

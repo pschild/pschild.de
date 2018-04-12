@@ -3,6 +3,11 @@ title: Anjens Unplugged
 layout: project
 date: "2013-12-16"
 titleImagePath: "./logo.jpg"
+tags:
+  - Homepage
+  - Joomla
+  - Webdesign
+  - Responsive
 ---
 Im Rahmen dieses Projektes entstand ein neuer Webauftritt der Musik-Band <a href="https://anjensunplugged.de/" target="_blank">Anjens Unplugged</a>.
 

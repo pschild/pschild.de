@@ -3,6 +3,12 @@ title: iList
 layout: project
 date: "2016-01-23"
 titleImagePath: "./ilist_8.png"
+tags:
+  - Studium
+  - Bachelor
+  - Mobile Development
+  - Android
+  - Einkaufsliste
 ---
 Im Rahmen des Abschluss-Projektes der Lehrveranstaltung "Mobile Development" an der Hochschule Rhein-Waal wurde zusammen mit mehreren Kommilitonen die Smartphone-Anwendung "iList" umgesetzt.
 

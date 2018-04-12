@@ -3,6 +3,12 @@ title: GirlsDay 2015
 layout: project
 date: "2015-04-23"
 titleImagePath: "./girlsday_1.jpg"
+tags:
+  - Studium
+  - Bachelor
+  - MINT
+  - Arduino
+  - Twitter
 ---
 Eine meiner Aufgaben als studentische Hilfskraft an der Hochschule Rhein-Waal war es, im Rahmen des <a href="https://www.girls-day.de/" target="_blank">GirlsDays</a> 2015 einer Gruppe von Schülerinnen die Programmierung mit einem Arduino näher zu bringen.
 

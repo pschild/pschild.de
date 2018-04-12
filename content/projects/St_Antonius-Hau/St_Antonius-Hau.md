@@ -3,6 +3,11 @@ title: St. Antonius-Hau
 layout: project
 date: "2015-08-31"
 titleImagePath: "./antonius_logo.png"
+tags:
+  - Homepage
+  - Wordpress
+  - Webdesign
+  - Responsive
 ---
 Für die Grundschule St. Antonius wurde ein <a href="https://antonius-hau.de/" target="_blank">Webauftritt</a> geplant und umgesetzt.
 

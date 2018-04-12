@@ -3,6 +3,12 @@ title: MyPlant
 layout: project
 date: "2014-06-16"
 titleImagePath: "./myplant_1.jpg"
+tags:
+  - Studium
+  - Bachelor
+  - Arduino
+  - Twitter
+  - Sensoren
 ---
 Ziel der Lehrveranstaltung "Projektmanagement" an der Hochschule Rhein-Waal war die Planung und Umsetzung eines beliebigen Projektes.<br/>
 In Zusammenarbeit mit mehreren Kommilitonen wurde das Projekt "MyPlant" bearbeitet. Dabei ging es um das Tracking von Umgebungsdaten der heimischen Pflanzen: Mit einem Arduino und entsprechenden Sensoren wurden die folgenden Werte ausgelesen:
