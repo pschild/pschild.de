@@ -23,6 +23,23 @@
         align-self: center;
       }
     }
+
+    ul.footerNav {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
 

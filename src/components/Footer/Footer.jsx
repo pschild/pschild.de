@@ -12,7 +12,14 @@ class Footer extends Component {
                         <ContactIcons contactData={this.props.contactData}/>
                     </div>
                     <div className={styles.column}>
-                        <NavigationLink to="/imprint" size={14}>Impressum</NavigationLink>
+                        <ul className={styles.footerNav}>
+                            <li>
+                                <NavigationLink to="/imprint" size={14}>Impressum</NavigationLink>
+                            </li>
+                            <li>
+                                <NavigationLink to="/privacy-policy" size={14}>Datenschutzerklärung</NavigationLink>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </footer>
