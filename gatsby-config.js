@@ -41,7 +41,7 @@ module.exports = {
                 ]
             }
         },
-        {
+        /*{
             resolve: `gatsby-plugin-google-analytics`,
             options: {
                 trackingId: config.googleAnalyticsID,
@@ -49,7 +49,7 @@ module.exports = {
                 anonymize: true,
                 respectDNT: true
             }
-        },
+        },*/
         {
             resolve: `gatsby-plugin-sitemap`
         }
